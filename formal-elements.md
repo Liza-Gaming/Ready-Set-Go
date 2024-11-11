@@ -65,7 +65,7 @@
 
 **שחקנים:** המשחק שלנו יהיה פשוט יותר ועונה על הצרכים של קהל היעד, בנוסף יש לו גם מטרה- ללמד את השחקן להתארגן ולשפר את התפקוד היום יומי שלו בחיים האמיתיים.
 
-![image](https://github.com/user-attachments/assets/a31e8f4e-32f8-46cd-a198-7efc0b587d71)
+![Screenshot 2024-11-11 130804](https://github.com/user-attachments/assets/e69d8775-b6f2-4195-83c0-661ac15d32bc)
 
 
 **משחק מובייל: Tiny Room Stories**
@@ -76,7 +76,8 @@
   
 **שחקנים:** המשחק שלנו יהיה פשוט יותר ועונה על הצרכים של קהל היעד, בנוסף יש לו גם מטרה ללמד את השחקן להתארגן ולשפר את התפקוד היום יומי שלו בחיים האמיתיים.
 
-![image](https://github.com/user-attachments/assets/bcb18bce-fc41-4801-900c-681e02469769)
+![unnamed](https://github.com/user-attachments/assets/d3c9c24e-8698-4406-8abc-451dfea3345a)
+
 
 
 
