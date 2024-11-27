@@ -47,7 +47,8 @@
 דרך להתנייד היא בעזרת חצי המקלדת שמתורגמים במשחק להליכה רגילה.
 
 
-![Screenshot 2024-11-27 142228](https://github.com/user-attachments/assets/f73a8321-a910-4b12-94a0-73fb74d2e98f)
+![image](https://github.com/user-attachments/assets/70438644-59ec-4d98-852d-1b3e3b772845)
+
 
 
 ## 8. תוצאות 📊
