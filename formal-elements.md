@@ -6,7 +6,8 @@
 המשחק מתאים למחשבים.
 
 
-![Screenshot 2024-11-27 231313](https://github.com/user-attachments/assets/4f4f67a4-694f-4c74-ac39-ba82aeb751af)
+![Screenshot 2024-12-15 212135](https://github.com/user-attachments/assets/36bd83b3-979a-42e7-8f3b-52a9cb59a056)
+
 
 
 ## רכיבים רשמיים
@@ -45,7 +46,8 @@
 במשחק יהיו מכשולים שיקשו על השחקן להתקדם, לדוגמה - כלב שחוסם את הכניסה לחדר כי הוא רוצה אוכל.
 כמו כן, השחקן יצטרך לפתור משימות כדי להתקדם, למשל, לבחור את הקופסה המתאימה לסנדוויץ'. לבחור את הפריטים הנכונים מתוך שולחן שיש בו המון סוגי פריטים.
 
-![Screenshot 2024-11-27 231408](https://github.com/user-attachments/assets/fd7842d8-5f4e-40da-8c18-4803685a9b24)
+
+![Screenshot 2024-12-15 212242](https://github.com/user-attachments/assets/41d41103-2e02-476e-bdcf-2f1ff1bf6cd6)
 
 
 ## 7. גבולות 🚧
@@ -55,7 +57,8 @@
 דרך להתנייד היא בעזרת חצי המקלדת שמתורגמים במשחק להליכה רגילה.
 
 
-![image](https://github.com/user-attachments/assets/70438644-59ec-4d98-852d-1b3e3b772845)
+
+![Screenshot 2024-12-15 211725](https://github.com/user-attachments/assets/7b8b3d0d-c844-40af-a67c-996a0bc93fc2)
 
 
 
