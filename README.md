@@ -3,6 +3,8 @@
 
 מחפשים חוויה שמאחדת תשוקה למשחקים עם מטרה חשובה? הצטרפו להרפתקה שתשפר את כישורי ההתארגנות שלכם ותעניק לכם עצמאות אמיתית - ברוכים הבאים ל'היכון, הכן צא!'.
 
+[שחקו במשחק](https://lizachep.itch.io/final-game-house)
+
 
 ![Screenshot 2024-12-15 212018](https://github.com/user-attachments/assets/ac7cac38-557c-46ac-bda6-3d7f59f225df)
 
