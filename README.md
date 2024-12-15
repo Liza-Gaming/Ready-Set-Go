@@ -3,7 +3,8 @@
 
 מחפשים חוויה שמאחדת תשוקה למשחקים עם מטרה חשובה? הצטרפו להרפתקה שתשפר את כישורי ההתארגנות שלכם ותעניק לכם עצמאות אמיתית - ברוכים הבאים ל'היכון, הכן צא!'.
 
-![Screenshot 2024-11-27 231630](https://github.com/user-attachments/assets/84dff1aa-1efe-4c2e-8482-0580ac09528f)
+
+![Screenshot 2024-12-15 212018](https://github.com/user-attachments/assets/ac7cac38-557c-46ac-bda6-3d7f59f225df)
 
 
 ## מהות המשחק
