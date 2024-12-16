@@ -15,8 +15,9 @@
 בסוף המשחק, השחקנים מקבלים דירוג על כישורי ההתארגנות שלהם בהתאם לניקוד שהשיגו.
 המטרה של המשחק היא לעזור לקהל היעד לאמץ כישורי התארגנות ובכך להגדיל את עצמאותם.
 
-[formal-elemnts](https://github.com/Liza-Gaming/Ready-Set-Go/blob/main/formal-elements.md)
+[formal elemnts](https://github.com/Liza-Gaming/Ready-Set-Go/blob/main/formal-elements.md)
 
+[dramatic elements](https://github.com/Liza-Gaming/Ready-Set-Go/blob/main/dramatic-elements.md)
 ## תכונות עקריות
 - חוויה תלת-ממדית מרתקת: סביבה וירטואלית שמחקה את המציאות אותה שחקננים יכולים לחקור.
 - אתגרים יומיומיים: איסוף פריטים חיוניים בכל חדר, כגון בגדים, אוכל ונעליים.
