@@ -45,7 +45,7 @@ public class StoveSliderBar : SliderBar
         {
             textToShow.text = "On time!"; // Display success message
             stopTimer = true; // Stop the timer
-            SceneManager.LoadScene(0); // Reload the scene
+            SceneManager.LoadScene("SampleScene"); // Reload the scene
         }
         // Check if the space bar was pressed too late
         else if (timerslider.value < 0.85f)

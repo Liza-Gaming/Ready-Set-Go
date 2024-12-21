@@ -28,7 +28,7 @@ public class BasketBehavior : MonoBehaviour
             textToShow.text = "Great!";
             if (points == 5)
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene("SampleScene");
             }
             // Iterate over each spawner and remove the corresponding clothing
             foreach (var spawner in spawners)
