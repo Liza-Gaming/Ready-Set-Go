@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class BasketBehavior : MonoBehaviour
 {
@@ -19,10 +20,10 @@ public class BasketBehavior : MonoBehaviour
     {
         string clothTag = other.gameObject.tag;
        // Destroy the clothing item that's collected
-        Destroy(other.gameObject);
 
         if (clothTag == "Sweater" || clothTag == "Socks" || clothTag == "Winter Hat" || clothTag == "Jeans Pants" || clothTag == "UnderPants")
         {
+            Destroy(other.gameObject);
             points++;
             textToShow.color = Color.green;
             textToShow.text = "Great!";
@@ -30,27 +31,28 @@ public class BasketBehavior : MonoBehaviour
             {
                 SceneManager.LoadScene("SampleScene");
             }
-            // Iterate over each spawner and remove the corresponding clothing
-            foreach (var spawner in spawners)
-            {
-                GameObject clothToRemove = null;
-                foreach (GameObject clothing in spawner.prefabToSpawn)
-                {
-                    if (clothing.CompareTag(clothTag))
-                    {
-                        clothToRemove = clothing;
-                        break;
-                    }
-                }
+            //// Iterate over each spawner and remove the corresponding clothing
+            //foreach (var spawner in spawners)
+            //{
+            //    GameObject clothToRemove = null;
+            //    foreach (GameObject clothing in spawner.prefabToSpawn)
+            //    {
+            //        if (clothing.CompareTag(clothTag))
+            //        {
+            //            clothToRemove = clothing;
+            //            break;
+            //        }
+            //    }
 
-                if (clothToRemove != null)
-                {
-                    spawner.prefabToSpawn.Remove(clothToRemove);
-                }
-            }
+            //    if (clothToRemove != null)
+            //    {
+            //        spawner.prefabToSpawn.Remove(clothToRemove);
+            //    }
+            //}
         }
-        else
+        else if(clothTag == "Summer Hat" || clothTag == "Short Pants" || clothTag == "Sun Glasses"  || clothTag == "T Shirt")
         {
+            Destroy(other.gameObject);
             textToShow.color = Color.red;
             textToShow.text = "Summer Item collected";
         }

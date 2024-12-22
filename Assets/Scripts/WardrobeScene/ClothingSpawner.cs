@@ -41,4 +41,5 @@ public class ClothingSpawner : MonoBehaviour
             newObject.transform.parent = parentOfAllInstances;
         }
     }
+
 }

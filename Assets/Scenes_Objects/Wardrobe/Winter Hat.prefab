@@ -550,7 +550,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2550161367452501918}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -583,7 +583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: -2.5, z: 0}
   lifetime: 12
-  PlayerPos: {fileID: 8664429777325326526, guid: 9c99cbac73a5a9643aa68ee1d2b3d6ac, type: 3}
+  PlayerPos: {fileID: 7764163924670580566, guid: e53c878866526fe4ca66e2a62dbab94e, type: 3}
 --- !u!65 &6909277141616902508
 BoxCollider:
   m_ObjectHideFlags: 0
