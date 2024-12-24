@@ -9,6 +9,7 @@ public class SceneController : MonoBehaviour
     public bool isStoveLoaded = false;
     public bool isWardrobeeLoaded = false;
     public bool isFridgeLoaded = false;
+    public bool isDeskLoaded = false;
     private void Awake()
     {
         // If no instance exists, this becomes the instance and we're setting it to persist
