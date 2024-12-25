@@ -35,16 +35,16 @@ public class Timer : MonoBehaviour
         }
         if (remainingTime <= 0)
         {
-            ResetLevel();
+            GameOverScreen();
         }
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    // Restart the scene
-    private void ResetLevel()
+    private void GameOverScreen()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // I will make game over screen.
     }
 }
