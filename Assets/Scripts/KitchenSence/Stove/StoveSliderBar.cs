@@ -10,6 +10,14 @@ public class StoveSliderBar : SliderBar
     [Tooltip("Reference to a UI Text element to display messages")]
     public Text textToShow;
 
+    [SerializeField]
+    [Tooltip("Minimal Border - To late")]
+    public float loweLimit = 0.85f;
+
+    [SerializeField]
+    [Tooltip("Maximal Border - To early")]
+    public float upperLimit = 1.6f;
+
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -41,21 +49,21 @@ public class StoveSliderBar : SliderBar
     private void HandlePress()
     {
         // Check if the space bar was pressed within the "on time" range
-        if (timerslider.value >= 0.85f && timerslider.value <= 1.6f)
+        if (timerslider.value >= loweLimit && timerslider.value <= upperLimit)
         {
             textToShow.text = "On time!"; // Display success message
             stopTimer = true; // Stop the timer
             SceneManager.LoadScene("SampleScene"); // Reload the scene
         }
         // Check if the space bar was pressed too late
-        else if (timerslider.value < 0.85f)
+        else if (timerslider.value < loweLimit)
         {
             textToShow.text = "Too late"; // Display late message
             stopTimer = true;
             StartCoroutine(ShowFeedbackAndReset());
         }
         // Check if the space bar was pressed too early
-        else if (timerslider.value > 1.6f)
+        else if (timerslider.value > upperLimit)
         {
             textToShow.text = "Too early"; // Display early message
             stopTimer = true;
