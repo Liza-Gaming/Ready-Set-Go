@@ -13,7 +13,7 @@ public class BasketBehavior : MonoBehaviour
 
     void Start()
     {
-        textToShow.text = "Collect all of the winter items";
+        textToShow.text = "Collect all of the summer items";
     }
 
     private void OnCollisionEnter(Collision other)
@@ -21,7 +21,7 @@ public class BasketBehavior : MonoBehaviour
         string clothTag = other.gameObject.tag;
        // Destroy the clothing item that's collected
 
-        if (clothTag == "Sweater" || clothTag == "Socks" || clothTag == "Winter Hat" || clothTag == "Jeans Pants" || clothTag == "UnderPants")
+        if (clothTag == "Summer Hat" || clothTag == "Short Pants" || clothTag == "Sun Glasses" || clothTag == "T Shirt")
         {
             Destroy(other.gameObject);
             points++;
@@ -50,11 +50,11 @@ public class BasketBehavior : MonoBehaviour
             //    }
             //}
         }
-        else if(clothTag == "Summer Hat" || clothTag == "Short Pants" || clothTag == "Sun Glasses"  || clothTag == "T Shirt")
+        else if(clothTag == "Sweater" || clothTag == "Socks" || clothTag == "Winter Hat" || clothTag == "Jeans Pants" || clothTag == "UnderPants")
         {
             Destroy(other.gameObject);
             textToShow.color = Color.red;
-            textToShow.text = "Summer Item collected";
+            textToShow.text = "Try again";
         }
     }
 }

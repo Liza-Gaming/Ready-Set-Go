@@ -1,75 +1,58 @@
-﻿using UnityEngine.UI;
+﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using System;
-using UnityEngine; 
+using System.Collections;
 
-// The StoveSliderBar class inherits from the SliderBar class
 public class StoveSliderBar : SliderBar
 {
-    [SerializeField]
-    [Tooltip("Reference to a UI Text element to display messages")]
-    public Text textToShow;
+    [SerializeField] public Text textToShow;
+    [SerializeField] public float loweLimit = 0.85f;
+    [SerializeField] public float upperLimit = 1.6f;
 
-    [SerializeField]
-    [Tooltip("Minimal Border - To late")]
-    public float loweLimit = 0.85f;
-
-    [SerializeField]
-    [Tooltip("Maximal Border - To early")]
-    public float upperLimit = 1.6f;
-
-    // Start is called before the first frame update
     protected override void Start()
     {
-        base.Start(); // Call the base class's Start method
-        textToShow.text = "Press the space bar on time!"; // Initial instruction message
+        base.Start();
+        textToShow.text = "Press the button on time!";
     }
 
-    // Update is called once per frame
     protected override void Update()
     {
-        base.Update(); // Use base class update functionality
+        base.Update();
 
-        // Check if the timer is running and if the space bar is pressed
-        if (isTimerRunning && Input.GetKeyDown(KeyCode.Space))
-        {
-            HandlePress(); // Handle the space bar press
-        }
-
-        // Check if the timer has run out
         if (timerslider.value <= 0)
         {
-            textToShow.text = "Too late"; // Display late message
-            stopTimer = true; // Stop the timer
-            StartCoroutine(ShowFeedbackAndReset()); // Show feedback and reset the timer
+            textToShow.text = "Too late";
+            stopTimer = true;
+            StartCoroutine(ShowFeedbackAndReset());
         }
     }
 
-    // Method to handle the space bar press event
+    // Public method to be called by UI button click
+    public void OnButtonPress()
+    {
+        HandlePress();
+    }
+
     private void HandlePress()
     {
-        // Check if the space bar was pressed within the "on time" range
         if (timerslider.value >= loweLimit && timerslider.value <= upperLimit)
         {
-            textToShow.text = "On time!"; // Display success message
-            stopTimer = true; // Stop the timer
-            SceneManager.LoadScene("SampleScene"); // Reload the scene
+            textToShow.text = "On time!";
+            stopTimer = true;
+            SceneManager.LoadScene("SampleScene");
         }
-        // Check if the space bar was pressed too late
         else if (timerslider.value < loweLimit)
         {
-            textToShow.text = "Too late"; // Display late message
+            textToShow.text = "Too late";
             stopTimer = true;
             StartCoroutine(ShowFeedbackAndReset());
         }
-        // Check if the space bar was pressed too early
         else if (timerslider.value > upperLimit)
         {
-            textToShow.text = "Too early"; // Display early message
+            textToShow.text = "Too early";
             stopTimer = true;
             StartCoroutine(ShowFeedbackAndReset());
         }
-        // Any other case, ensuring reset happens
         else
         {
             stopTimer = true;
@@ -77,11 +60,10 @@ public class StoveSliderBar : SliderBar
         }
     }
 
-    // Coroutine to show feedback and reset the timer
-    private System.Collections.IEnumerator ShowFeedbackAndReset()
+    private IEnumerator ShowFeedbackAndReset()
     {
-        yield return new WaitForSeconds(2); // Wait for 2 seconds for the feedback to be visible
-        textToShow.text = "Press the space bar on time!"; // Reset instruction message
-        ResetTimer(); 
+        yield return new WaitForSeconds(2);
+        textToShow.text = "Press the button on time!";
+        ResetTimer();
     }
 }

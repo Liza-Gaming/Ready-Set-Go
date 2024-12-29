@@ -1,49 +1,37 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class BasketMover : MonoBehaviour
 {
     [SerializeField]
-    [Tooltip("Control the player with defined keyboard buttons")]
-    public InputAction PlayerControls;
-
-    [SerializeField]
     [Tooltip("Movement speed in meters per second")]
     private float _speed = 5f;
 
+    [SerializeField]
+    [Tooltip("Distance to move per button press")]
+    private float moveDistance = 1f; // Set this to how far you want it to move per press
 
     private Rigidbody rb;
 
-    // Direction vector to apply movement.
-    Vector3 moveDir = Vector3.zero;
-
-
-    void OnEnable()
-    {
-        PlayerControls.Enable();
-    }
-
-    void OnDisable()
-    {
-        PlayerControls.Disable();
-    }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Vector2 inputVector = PlayerControls.ReadValue<Vector2>();
-        moveDir = new Vector3(inputVector.x, 0, 0); // Move only along X-axis
+        // The actual movement is triggered by button presses directly
     }
 
-    void FixedUpdate()
+    // Public methods to be called by UI buttons
+    public void MoveLeft()
     {
-        rb.linearVelocity = moveDir * _speed; // 'speed' should be a predefined float value
+        // Move left by a fixed distance
+        rb.MovePosition(rb.position + Vector3.left * moveDistance);
     }
 
+    public void MoveRight()
+    {
+        // Move right by a fixed distance
+        rb.MovePosition(rb.position + Vector3.right * moveDistance);
+    }
 }
