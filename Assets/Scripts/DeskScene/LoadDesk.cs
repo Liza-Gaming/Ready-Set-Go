@@ -12,7 +12,6 @@ public class LoadDesk : MonoBehaviour
             Destroy(gameObject);
             //player.transform.position = new Vector3(this.transform.position.x + 1, this.transform.position.y + 1, this.transform.position.z + 1);
             SceneManager.LoadScene("Desk");
-            
         }
     }
 }

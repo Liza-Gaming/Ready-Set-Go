@@ -38,8 +38,8 @@ public class SliderBar : MonoBehaviour
         // If the time has elapsed, stop the timer and reset it
         if (time <= 0)
         {
-            stopTimer = true; 
-            isTimerRunning = false; 
+            stopTimer = true;
+            isTimerRunning = false;
             ResetTimer(); // Reset timer to initial state
         }
 
@@ -59,8 +59,8 @@ public class SliderBar : MonoBehaviour
     // Method to reset the timer to its starting state
     protected virtual void ResetTimer()
     {
-        stopTimer = false; 
-        timerslider.value = maxTime; 
+        stopTimer = false;
+        timerslider.value = maxTime;
         StartCountdown(); // Restart the countdown
     }
 }
