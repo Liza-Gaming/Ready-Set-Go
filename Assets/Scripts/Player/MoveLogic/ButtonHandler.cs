@@ -8,14 +8,14 @@ public class ButtonHandler : MonoBehaviour
 
     public void OnPointerDown()
     {
-            movement.MoveForward(true);
-            forwardPressed = true;
+        movement.MoveForward(true);
+        forwardPressed = true;
     }
 
     public void OnPointerUp()
     {
-            movement.MoveForward(false);
-            forwardPressed = false;
+        movement.MoveForward(false);
+        forwardPressed = false;
     }
 
     void Update()

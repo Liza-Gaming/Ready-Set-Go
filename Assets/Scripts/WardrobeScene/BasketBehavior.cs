@@ -19,8 +19,7 @@ public class BasketBehavior : MonoBehaviour
     private void OnCollisionEnter(Collision other)
     {
         string clothTag = other.gameObject.tag;
-       // Destroy the clothing item that's collected
-
+        //Destroy the clothing item that's collected
         if (clothTag == "Summer Hat" || clothTag == "Short Pants" || clothTag == "Sun Glasses" || clothTag == "T Shirt")
         {
             Destroy(other.gameObject);
@@ -50,7 +49,7 @@ public class BasketBehavior : MonoBehaviour
             //    }
             //}
         }
-        else if(clothTag == "Sweater" || clothTag == "Socks" || clothTag == "Winter Hat" || clothTag == "Jeans Pants" || clothTag == "UnderPants")
+        else if (clothTag == "Sweater" || clothTag == "Socks" || clothTag == "Winter Hat" || clothTag == "Jeans Pants" || clothTag == "UnderPants")
         {
             Destroy(other.gameObject);
             textToShow.color = Color.red;

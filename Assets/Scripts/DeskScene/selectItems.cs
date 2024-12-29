@@ -6,8 +6,8 @@ using System.Collections;
 
 public class selectItems : MonoBehaviour
 {
-    public GameObject[] interactableObjects; 
-    public Text feedbackText; 
+    public GameObject[] interactableObjects;
+    public Text feedbackText;
 
     // Method to call when an object is selected
     public void ObjectSelected(GameObject selectedObject)
@@ -46,14 +46,12 @@ public class selectItems : MonoBehaviour
         }
 
         // Check if the required number of objects are inactive
-        if (inactiveCount >= 2) // Change this value based on your game's logic
+        if (inactiveCount >= 2)
         {
             feedbackText.color = Color.green;
             feedbackText.text = "Level Completed!";
             StartCoroutine(ShowFeedback());
             SceneManager.LoadScene("SampleScene");
-
-
         }
     }
 
