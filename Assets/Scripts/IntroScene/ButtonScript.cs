@@ -22,7 +22,7 @@ public class ButtonScript : MonoBehaviour
 
     private System.Collections.IEnumerator ShowButtonAfterDelay()
     {
-        yield return new WaitForSeconds(delayTime); 
+        yield return new WaitForSeconds(delayTime);
         if (loadSceneButton != null)
         {
             loadSceneButton.gameObject.SetActive(true); // Show the button
