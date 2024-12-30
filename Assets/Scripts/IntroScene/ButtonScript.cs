@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 public class ButtonScript : MonoBehaviour
 {
     public Button loadSceneButton;  // Assign through inspector
-    private float delayTime = 32f;
+    public Button skip;
+    [SerializeField] private float delayTime = 32f;
 
     void Start()
     {
@@ -21,14 +22,14 @@ public class ButtonScript : MonoBehaviour
 
     private System.Collections.IEnumerator ShowButtonAfterDelay()
     {
-        yield return new WaitForSeconds(delayTime); // Wait for 32 seconds
+        yield return new WaitForSeconds(delayTime); 
         if (loadSceneButton != null)
         {
             loadSceneButton.gameObject.SetActive(true); // Show the button
         }
     }
 
-    private void OnButtonClick()
+    public void OnButtonClick()
     {
         SceneManager.LoadScene("SampleScene"); // Load the scene named "SampleScene"
     }
