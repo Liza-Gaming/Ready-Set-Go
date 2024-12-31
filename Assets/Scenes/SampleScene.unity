@@ -72965,16 +72965,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHandler: {fileID: 725815037}
-  arrowUI:
-  - {fileID: 725815031}
-  - {fileID: 401524489}
-  - {fileID: 1326210938}
-  isStoveLoaded: 0
-  isWardrobeeLoaded: 0
-  isFridgeLoaded: 0
-  isDeskLoaded: 0
-  taskDisplay: {fileID: 1266886584}
-  numOfTatsks: 4
+  numOfTasks: 4
 --- !u!1 &1692001415
 GameObject:
   m_ObjectHideFlags: 0
@@ -80398,6 +80389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1893722184}
   - component: {fileID: 1893722185}
+  - component: {fileID: 1893722186}
   m_Layer: 0
   m_Name: Game Logic
   m_TagString: Untagged
@@ -80435,6 +80427,23 @@ MonoBehaviour:
   timerText: {fileID: 995842995}
   background: {fileID: 380476197}
   remainingTime: 300
+--- !u!114 &1893722186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1893722183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c19985ae748ccb4d9e2a7179f97cf1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  taskDisplay: {fileID: 1266886584}
+  arrowUI:
+  - {fileID: 725815031}
+  - {fileID: 1326210938}
+  - {fileID: 401524489}
 --- !u!1001 &1896433586
 PrefabInstance:
   m_ObjectHideFlags: 0
