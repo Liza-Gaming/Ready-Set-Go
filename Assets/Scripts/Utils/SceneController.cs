@@ -1,11 +1,13 @@
 using UnityEngine;
+using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
     public ButtonHandler buttonHandler;
-    public GameObject arrowUI; // Reference to the arrow UI GameObject
+    [SerializeField] public List<GameObject> arrowUI = new List<GameObject>();
+    private HashSet<string> loadedScenes = new HashSet<string>();
 
     public bool isStoveLoaded = false;
     public bool isWardrobeeLoaded = false;
@@ -26,6 +28,16 @@ public class SceneController : MonoBehaviour
         }
     }
 
+    public bool IsSceneLoaded(string sceneName)
+    {
+        return loadedScenes.Contains(sceneName);
+    }
+
+    public void MarkSceneAsLoaded(string sceneName)
+    {
+        loadedScenes.Add(sceneName);
+    }
+
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded; // Unsubscribe when destroyed
@@ -38,12 +50,17 @@ public class SceneController : MonoBehaviour
         {
             // Show arrows
             buttonHandler.OnPointerUp();
-            if (arrowUI != null) arrowUI.SetActive(true);
+            foreach (var arrow in arrowUI)
+            {
+                if (arrow != null) arrow.SetActive(true);
+            }
         }
         else
         {
-            // Hide arrows
-            if (arrowUI != null) arrowUI.SetActive(false);
+            foreach (var arrow in arrowUI)
+            {
+                if (arrow != null) arrow.SetActive(false);
+            }
         }
     }
 }

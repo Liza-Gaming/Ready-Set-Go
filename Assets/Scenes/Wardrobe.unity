@@ -676,9 +676,9 @@ MonoBehaviour:
   - {fileID: 3557311436823203984, guid: b1e6e341cdea16d49b3ed559aadd1fa9, type: 3}
   - {fileID: 2550161367452501918, guid: 42863d417b52f04439e15ad9b4b8a05b, type: 3}
   - {fileID: 7965013282546290129, guid: aca700a55664014458997c967c009a3f, type: 3}
-  minTimeBetweenSpawns: 1
-  maxTimeBetweenSpawns: 1.5
-  maxXDistance: 6
+  minTimeBetweenSpawns: 0.5
+  maxTimeBetweenSpawns: 1
+  maxXDistance: 7
   parentOfAllInstances: {fileID: 684136108}
 --- !u!4 &620283330
 Transform:

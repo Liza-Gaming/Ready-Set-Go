@@ -16076,10 +16076,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 808101988}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fc6a70a6397cda49b5f9157ea3e3309, type: 3}
+  m_Script: {fileID: 11500000, guid: 30c44faee6d1d594988f11716743d248, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 675453800}
+  sceneName: Wardrobe
 --- !u!1 &808930892
 GameObject:
   m_ObjectHideFlags: 0
@@ -18445,7 +18446,7 @@ GameObject:
   - component: {fileID: 961427101}
   - component: {fileID: 961427100}
   - component: {fileID: 961427099}
-  - component: {fileID: 961427098}
+  - component: {fileID: 961427102}
   m_Layer: 0
   m_Name: Fridg Scene
   m_TagString: StoveScene
@@ -18469,19 +18470,6 @@ Transform:
   - {fileID: 308950952}
   m_Father: {fileID: 297386154}
   m_LocalEulerAnglesHint: {x: -95.426, y: 0, z: 0}
---- !u!114 &961427098
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 961427096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa03c3412e1e53046b3c5e32f053539b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 675453800}
 --- !u!199 &961427099
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -23303,6 +23291,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0.2}
+--- !u!114 &961427102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961427096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c44faee6d1d594988f11716743d248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 675453800}
+  sceneName: Fridge
 --- !u!1 &965406279 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4423045620967985251, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
@@ -72884,7 +72886,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonHandler: {fileID: 725815037}
-  arrowUI: {fileID: 0}
+  arrowUI:
+  - {fileID: 725815031}
+  - {fileID: 401524489}
+  - {fileID: 1326210938}
   isStoveLoaded: 0
   isWardrobeeLoaded: 0
   isFridgeLoaded: 0
@@ -75091,7 +75096,7 @@ GameObject:
   - component: {fileID: 1869777580}
   - component: {fileID: 1869777579}
   - component: {fileID: 1869777578}
-  - component: {fileID: 1869777577}
+  - component: {fileID: 1869777581}
   m_Layer: 0
   m_Name: Desk Scene
   m_TagString: StoveScene
@@ -75115,19 +75120,6 @@ Transform:
   - {fileID: 1502559778}
   m_Father: {fileID: 1241529930}
   m_LocalEulerAnglesHint: {x: -95.426, y: 0, z: 0}
---- !u!114 &1869777577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869777575}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a3decd8840d0dc439aec3cac6102b03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 675453800}
 --- !u!199 &1869777578
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -79949,6 +79941,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0.2}
+--- !u!114 &1869777581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869777575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c44faee6d1d594988f11716743d248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 675453800}
+  sceneName: Desk
 --- !u!1 &1881650338
 GameObject:
   m_ObjectHideFlags: 0
@@ -84670,7 +84676,7 @@ GameObject:
   - component: {fileID: 2111071804}
   - component: {fileID: 2111071803}
   - component: {fileID: 2111071802}
-  - component: {fileID: 2111071801}
+  - component: {fileID: 2111071805}
   m_Layer: 0
   m_Name: Stove Scene
   m_TagString: StoveScene
@@ -84694,19 +84700,6 @@ Transform:
   - {fileID: 34441449}
   m_Father: {fileID: 297386154}
   m_LocalEulerAnglesHint: {x: -95.426, y: 0, z: 0}
---- !u!114 &2111071801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2111071799}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddd9e41b19ae8fa41a4075bbcd6cf0f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 675453800}
 --- !u!199 &2111071802
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -89528,6 +89521,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0.2}
+--- !u!114 &2111071805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2111071799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30c44faee6d1d594988f11716743d248, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 675453800}
+  sceneName: Stove
 --- !u!1 &2118558529
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 
 
-public class selectItems : MonoBehaviour
+public class SelectItems : MonoBehaviour
 {
     public GameObject[] interactableObjects;
     public Text feedbackText;
