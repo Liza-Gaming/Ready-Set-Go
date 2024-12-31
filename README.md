@@ -27,7 +27,8 @@
 ![Screenshot 2024-11-27 113004](https://github.com/user-attachments/assets/b2121c8a-ffba-4e60-b5f2-7617a50a7d6d)
 
 ## מבנה בקבצים (מתעדכן)
-![image](https://github.com/user-attachments/assets/03d5d362-e8cf-4a97-8193-1053194cbab7)
+![image](https://github.com/user-attachments/assets/ffbf423d-e2cc-4f06-adc7-b360c088a703)
+
 
 
 **פיתוח המשחק:** אליזבט צ'פורקו
