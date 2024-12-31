@@ -53,7 +53,7 @@ public class SceneController : MonoBehaviour
     private void OnDestroy()
     {
         UpdateTaskDisplay();
-        SceneManager.sceneLoaded -= OnSceneLoaded; // Unsubscribe when destroyed
+        SceneManager.sceneLoaded -= OnSceneLoaded; 
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
