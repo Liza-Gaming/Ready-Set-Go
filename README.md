@@ -26,6 +26,10 @@
 
 ![Screenshot 2024-11-27 113004](https://github.com/user-attachments/assets/b2121c8a-ffba-4e60-b5f2-7617a50a7d6d)
 
+## מבנה בקבצים (מתעדכן)
+![image](https://github.com/user-attachments/assets/03d5d362-e8cf-4a97-8193-1053194cbab7)
+
+
 **פיתוח המשחק:** אליזבט צ'פורקו
 
 **צוות ריפוי בעיסוק:**
