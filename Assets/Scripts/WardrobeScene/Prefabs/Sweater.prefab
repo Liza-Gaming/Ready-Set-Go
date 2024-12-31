@@ -1002,7 +1002,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: -2.5, z: 0}
   lifetime: 12
-  PlayerPos: {fileID: 7764163924670580566, guid: e53c878866526fe4ca66e2a62dbab94e, type: 3}
+  PlayerPos: {fileID: 7764163924670580566, guid: 9e9244a1d9054a44ca1d2f66c1def70b, type: 3}
 --- !u!65 &1172370041143611199
 BoxCollider:
   m_ObjectHideFlags: 0
