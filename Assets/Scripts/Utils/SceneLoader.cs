@@ -13,7 +13,8 @@ public class SceneLoader : MonoBehaviour
             if (!SceneController.instance.IsSceneLoaded(sceneName))
             {
                 SceneController.instance.MarkSceneAsLoaded(sceneName);
-                Destroy(gameObject); // Optional: Destroy the loader object
+                UIManager.instance.MarkTaskAsDone(sceneName);
+                Destroy(gameObject);
                 SceneManager.LoadScene(sceneName);
             }
         }

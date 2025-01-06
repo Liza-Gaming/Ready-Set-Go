@@ -5,7 +5,7 @@ using System.Collections.Generic;
 public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
-    public ButtonHandler buttonHandler; // Assumes there's a button handler logic still needed here
+    public ButtonHandler buttonHandler;
     private HashSet<string> loadedScenes = new HashSet<string>();
     [SerializeField] private int numOfTasks = 4;
 
@@ -16,7 +16,6 @@ public class SceneController : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
-            UIManager.instance.UpdateTaskDisplay(loadedScenes.Count, numOfTasks);
         }
         else if (instance != this)
         {
@@ -32,7 +31,6 @@ public class SceneController : MonoBehaviour
     public void MarkSceneAsLoaded(string sceneName)
     {
         loadedScenes.Add(sceneName);
-        UIManager.instance.UpdateTaskDisplay(loadedScenes.Count, numOfTasks);
     }
 
     private void OnDestroy()
@@ -42,12 +40,11 @@ public class SceneController : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        UIManager.instance.ShowTasks(scene.buildIndex == 1); // Show tasks only in main scene
+        UIManager.instance.ToggleArrows(scene.buildIndex == 1);
         if (scene.buildIndex == 1)
         {
-            // Show arrows
             buttonHandler.OnPointerUp();
         }
-        UIManager.instance.UpdateTaskDisplay(loadedScenes.Count, numOfTasks);
-        UIManager.instance.ToggleArrows(scene.buildIndex == 1); // Assume 1 is SampleScene where arrows need to be active
     }
 }

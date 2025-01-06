@@ -8,8 +8,6 @@ public class SelectItems : MonoBehaviour
 {
     public GameObject[] interactableObjects;
     public Text feedbackText;
-
-    // Method to call when an object is selected
     public void ObjectSelected(GameObject selectedObject)
     {
 

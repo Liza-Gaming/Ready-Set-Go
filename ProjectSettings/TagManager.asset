@@ -17,6 +17,11 @@ TagManager:
   - Winter Hat
   - Selectable
   - Collectable
+  - WardrobeScene
+  - DeskScene
+  - Stove
+  - Desk
+  - Wardrobe
   layers:
   - Default
   - TransparentFX
