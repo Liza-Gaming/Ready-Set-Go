@@ -27,7 +27,7 @@
 ![Screenshot 2024-11-27 113004](https://github.com/user-attachments/assets/b2121c8a-ffba-4e60-b5f2-7617a50a7d6d)
 
 ## מבנה בקבצים (מתעדכן)
-![image](https://github.com/user-attachments/assets/ffbf423d-e2cc-4f06-adc7-b360c088a703)
+![image](https://github.com/user-attachments/assets/cbd2a6c2-42cf-414f-8fba-14ded8067542)
 
 
 
