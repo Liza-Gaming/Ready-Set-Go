@@ -3680,7 +3680,7 @@ Transform:
   m_GameObject: {fileID: 809667601}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.8819621, z: -0, w: 0.47132036}
-  m_LocalPosition: {x: 5.47, y: -34.7429, z: -0.14}
+  m_LocalPosition: {x: 4.9, y: -34.7, z: -0.2}
   m_LocalScale: {x: 1.6666664, y: 1.6666665, z: 1.6666664}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4373,53 +4373,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 7.538, y: -1.986, z: 21.285}
---- !u!1 &1098817766
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1098817768}
-  - component: {fileID: 1098817767}
-  m_Layer: 0
-  m_Name: Timer Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1098817767
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098817766}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e66dff63938fedf4b849068e364085dd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timerslider: {fileID: 1441308844}
-  stopTimer: 0
-  maxTime: 20
---- !u!4 &1098817768
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098817766}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 447.8, y: 216.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1108521085
 GameObject:
   m_ObjectHideFlags: 0
@@ -5851,7 +5804,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.043137256, g: 0.7882353, b: 0, a: 1}
     m_PressedColor: {r: 0.043137256, g: 0.7882353, b: 0, a: 1}
     m_SelectedColor: {r: 0.043137256, g: 0.7882353, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.00663054, g: 1, b: 0, a: 1}
     m_ColorMultiplier: 1.92
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -5865,15 +5818,15 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 511787131}
   m_FillRect: {fileID: 511787130}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 20
+  m_MaxValue: 15
   m_WholeNumbers: 0
-  m_Value: 20
+  m_Value: 15
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -41313,6 +41266,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2037693171}
   - component: {fileID: 2037693172}
+  - component: {fileID: 2037693173}
+  - component: {fileID: 2037693174}
   m_Layer: 0
   m_Name: Scene Logic
   m_TagString: Untagged
@@ -41354,6 +41309,36 @@ MonoBehaviour:
   - {fileID: 662550027}
   - {fileID: 1978860437}
   feedbackText: {fileID: 445388809}
+  items: 2
+--- !u!114 &2037693173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037693170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddbd28a1370e4ca4397b0ec5caa950f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2037693174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2037693170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc46ede808b1954593cdd2fca49216c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerslider: {fileID: 1441308844}
+  stopTimer: 0
+  isTimerRunning: 0
+  maxTime: 15
+  textToShow: {fileID: 445388809}
 --- !u!43 &2086596901
 Mesh:
   m_ObjectHideFlags: 0
@@ -41625,7 +41610,6 @@ SceneRoots:
   - {fileID: 1179145259}
   - {fileID: 661474966}
   - {fileID: 2037693171}
-  - {fileID: 1098817768}
   - {fileID: 1613194884}
   - {fileID: 410303632}
   - {fileID: 784323220}

@@ -12,7 +12,7 @@ public class SliderBar : MonoBehaviour
     protected bool stopTimer;
 
     // Flag to indicate if the timer is running
-    protected bool isTimerRunning;
+    public bool isTimerRunning;
 
     [SerializeField]
     [Tooltip("The maximum time the slider will represent (initial timer value")]

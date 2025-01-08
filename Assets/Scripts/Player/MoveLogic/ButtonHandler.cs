@@ -5,17 +5,19 @@ public class ButtonHandler : MonoBehaviour
 {
     public Movement movement;
     public bool forwardPressed;
-
+    public CameraBob cameraBob;
 
     public void OnPointerDown()
     {
         movement.MoveForward(true);
+        cameraBob.SetBobbing(true);
         forwardPressed = true;
     }
 
     public void OnPointerUp()
     {
         movement.MoveForward(false);
+        cameraBob.SetBobbing(false);
         forwardPressed = false;
     }
 

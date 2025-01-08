@@ -8,6 +8,7 @@ public class SelectItems : MonoBehaviour
 {
     public GameObject[] interactableObjects;
     public Text feedbackText;
+    [SerializeField] public int items;
     public void ObjectSelected(GameObject selectedObject)
     {
 
@@ -44,7 +45,7 @@ public class SelectItems : MonoBehaviour
         }
 
         // Check if the required number of objects are inactive
-        if (inactiveCount >= 2)
+        if (inactiveCount >= items)
         {
             feedbackText.color = Color.green;
             feedbackText.text = "Level Completed!";

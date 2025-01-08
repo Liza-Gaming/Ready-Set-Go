@@ -7,7 +7,7 @@ public class SceneController : MonoBehaviour
     public static SceneController instance;
     public ButtonHandler buttonHandler;
     private HashSet<string> loadedScenes = new HashSet<string>();
-    [SerializeField] private int numOfTasks = 4;
+    [SerializeField] private int numOfTasks = 5;
 
     private void Awake()
     {

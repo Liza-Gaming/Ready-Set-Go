@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private List<GameObject> arrowUI;
     public GameObject paper;
-    [SerializeField] private List<TextMeshProUGUI> taskTexts = new List<TextMeshProUGUI>();
+    public Text mission;
+    [SerializeField] public List<TextMeshProUGUI> taskTexts = new List<TextMeshProUGUI>();
     public Color completedTaskColor = new Color(0.5f, 0.7f, 0.2f, 1f);
 
     private void Awake()
