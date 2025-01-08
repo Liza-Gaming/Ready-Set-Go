@@ -7,7 +7,7 @@ public class CameraBob : MonoBehaviour
     [SerializeField] public float midpoint = 1.6f;       // Standard height of the camera
 
     private float timer = 0f;
-    private bool isBobbing = false;  
+    private bool isBobbing = false;
 
     // Function to start or stop bobbing
     public void SetBobbing(bool state)

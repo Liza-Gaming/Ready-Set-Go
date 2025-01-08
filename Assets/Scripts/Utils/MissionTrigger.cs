@@ -39,7 +39,7 @@ public class MissionTrigger : MonoBehaviour
                     {
                         UIManager.instance.mission.gameObject.SetActive(false); // Hide the mission text
                     }
-                    return; 
+                    return;
                 }
             }
         }
