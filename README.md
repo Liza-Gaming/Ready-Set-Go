@@ -27,7 +27,64 @@
 ![Screenshot 2024-11-27 113004](https://github.com/user-attachments/assets/b2121c8a-ffba-4e60-b5f2-7617a50a7d6d)
 
 ## מבנה בקבצים (מתעדכן)
-![image](https://github.com/user-attachments/assets/7d069b79-9b93-4559-8e83-62aa77c0d513)
+```bash
+Assets/
+│
+├── Scenes/
+│   ├── Intro
+│   ├── Sample Scene
+│   ├── Stove
+│   ├── Fridge
+│   ├── Wardrobe
+│   ├── Desk
+│   └── Towel
+│
+├── Scripts/
+│   ├── Desk Scene/
+│   │
+│   ├── Intro Scene/
+│   │   ├── ButtonScript.cs
+│   │   └── IntroVideoPlayer.cs
+│   │
+│   ├── Kitchen Scene/
+│   │   ├── Fridge/
+│   │   │   └── DisplayImage.cs
+│   │   └── Stove/
+│   │       └── StoveSliderBar.cs
+│   │
+│   ├── Wardrobe Scene/
+│   │   ├── BasketBehavior.cs
+│   │   ├── BasketMover.cs
+│   │   ├── ClothingSpawner.cs
+│   │   ├── Mover.cs
+│   │   └── Prefabs/
+│   │
+│   ├── Towel Scene/
+│   │
+│   ├── Player/
+│   │   ├── MoveLogic/
+│   │   │   ├── CameraBob.cs
+│   │   │   └── Movement.cs
+│   │   ├── ButtonHandler.cs
+│   │   ├── PlayerManager.cs
+│   │   ├── HoverMove.cs
+│   │   └── MissionTrigger.cs
+│   │
+│   ├── Utils/
+│   │   ├── SceneController.cs
+│   │   ├── SceneLoader.cs
+│   │   ├── SliderBar.cs
+│   │   ├── Timer.cs
+│   │   ├── UIManager.cs
+│   │   ├── Selection.cs
+│   │   ├── SelectItems.cs
+│   │   ├── SliderController.cs
+│   │   ├── MissionTrigger.cs
+│   │   ├── DisplayImage.cs
+│   │   └── AudioManager.cs
+│   │
+└── └── UI/
+```
 
 
 
