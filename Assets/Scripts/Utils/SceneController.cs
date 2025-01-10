@@ -47,7 +47,7 @@ public class SceneController : MonoBehaviour
         {
             buttonHandler.OnPointerUp();
         }
-        if(loadedScenes.Count == numOfTasks && scene.buildIndex == 1)
+        if (loadedScenes.Count == numOfTasks && scene.buildIndex == 1)
         {
             finalScene.SetActive(true);
             UIManager.instance.endMission.gameObject.SetActive(true);
