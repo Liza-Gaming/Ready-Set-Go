@@ -6704,6 +6704,7 @@ MonoBehaviour:
   rightPress: {fileID: 8300000, guid: 7bd6b897eb5ca4b7d88a205c4a51640c, type: 3}
   rightClothes: {fileID: 8300000, guid: 79180f511d89441b9aa23ccae1992fe0, type: 3}
   wrongClothes: {fileID: 8300000, guid: 89e6bc608da7b47d4914f3d9c2484e48, type: 3}
+  missioncompleted: {fileID: 0}
 --- !u!4 &1783729423
 Transform:
   m_ObjectHideFlags: 0
@@ -7005,6 +7006,7 @@ MonoBehaviour:
   - {fileID: 1331882624}
   feedbackText: {fileID: 1791426272}
   items: 1
+  sceneName: Towel
 --- !u!4 &1865009889
 Transform:
   m_ObjectHideFlags: 0

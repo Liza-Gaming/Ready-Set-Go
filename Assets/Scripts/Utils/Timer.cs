@@ -40,13 +40,12 @@ public class Timer : MonoBehaviour
         {
             remainingTime -= Time.deltaTime;
         }
+        else if (remainingTime < 1)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
 
         UpdateTimerUI();
-
-        if (remainingTime <= 0)
-        {
-            ResetLevel();
-        }
     }
 
     private void UpdateTimerUI()
@@ -54,11 +53,6 @@ public class Timer : MonoBehaviour
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
-    }
-
-    private void ResetLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)

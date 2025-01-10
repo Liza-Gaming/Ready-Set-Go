@@ -9,7 +9,7 @@ public class SelectItems : MonoBehaviour
     public GameObject[] interactableObjects;
     public Text feedbackText;
     [SerializeField] public int items;
-
+    [SerializeField] private string sceneName;
     AudioManager audioManager;
 
     private void Awake()
@@ -59,7 +59,15 @@ public class SelectItems : MonoBehaviour
             feedbackText.color = Color.green;
             feedbackText.text = "Level Completed!";
             StartCoroutine(ShowFeedback());
-            SceneManager.LoadScene("SampleScene");
+            if(sceneName == "OpenDoor")
+            {
+                SceneManager.LoadScene("Win");
+            }
+            else 
+            {
+                audioManager.PlaySFX(audioManager.rightChoise);
+                SceneManager.LoadScene("SampleScene");
+            }
         }
     }
 
