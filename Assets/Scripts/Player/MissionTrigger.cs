@@ -1,7 +1,15 @@
 using UnityEngine;
+using System.Collections;
 
 public class MissionTrigger : MonoBehaviour
 {
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         UpdateMissionText(other, true);
@@ -24,6 +32,13 @@ public class MissionTrigger : MonoBehaviour
     // Method to update the mission text based on entering or exiting the trigger
     private void UpdateMissionText(Collider other, bool isEntering)
     {
+        if (other.tag == "Bonus")
+        {
+            audioManager.PlaySFX(audioManager.collectBall);
+            UIManager.instance.bonusText.gameObject.SetActive(true);
+            Destroy(other.gameObject);
+            StartCoroutine(ShowFeedback());
+        }
         if (UIManager.instance != null && UIManager.instance.taskTexts.Count > 0)
         {
             foreach (var taskText in UIManager.instance.taskTexts)
@@ -43,5 +58,11 @@ public class MissionTrigger : MonoBehaviour
                 }
             }
         }
+    }
+
+    private IEnumerator ShowFeedback()
+    {
+        yield return new WaitForSeconds(3);
+        UIManager.instance.bonusText.gameObject.SetActive(false);
     }
 }

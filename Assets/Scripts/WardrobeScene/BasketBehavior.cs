@@ -11,6 +11,13 @@ public class BasketBehavior : MonoBehaviour
 
     public List<ClothingSpawner> spawners; // List to hold all your spawners
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     void Start()
     {
         textToShow.text = "Collect all of the summer items";
@@ -22,6 +29,7 @@ public class BasketBehavior : MonoBehaviour
         //Destroy the clothing item that's collected
         if (clothTag == "Summer Hat" || clothTag == "Short Pants" || clothTag == "Sun Glasses" || clothTag == "T Shirt")
         {
+            audioManager.PlaySFX(audioManager.rightClothes);
             Destroy(other.gameObject);
             points++;
             textToShow.color = Color.green;
@@ -51,6 +59,7 @@ public class BasketBehavior : MonoBehaviour
         }
         else if (clothTag == "Sweater" || clothTag == "Socks" || clothTag == "Winter Hat" || clothTag == "Jeans Pants" || clothTag == "UnderPants")
         {
+            audioManager.PlaySFX(audioManager.wrongClothes);
             Destroy(other.gameObject);
             textToShow.color = Color.red;
             textToShow.text = "Try again";

@@ -9,6 +9,13 @@ public class StoveSliderBar : SliderBar
     [SerializeField] public float loweLimit = 0.85f;
     [SerializeField] public float upperLimit = 1.6f;
 
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
     protected override void Start()
     {
         base.Start();
@@ -38,18 +45,21 @@ public class StoveSliderBar : SliderBar
         if (timerslider.value >= loweLimit && timerslider.value <= upperLimit)
         {
             textToShow.text = "On time!";
+            audioManager.PlaySFX(audioManager.rightPress);
             stopTimer = true;
             SceneManager.LoadScene("SampleScene");
         }
         else if (timerslider.value < loweLimit)
         {
             textToShow.text = "Too late";
+            audioManager.PlaySFX(audioManager.wrongPress);
             stopTimer = true;
             StartCoroutine(ShowFeedbackAndReset());
         }
         else if (timerslider.value > upperLimit)
         {
             textToShow.text = "Too early";
+            audioManager.PlaySFX(audioManager.wrongPress);
             stopTimer = true;
             StartCoroutine(ShowFeedbackAndReset());
         }

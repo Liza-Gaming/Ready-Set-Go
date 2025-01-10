@@ -26,6 +26,9 @@ TagManager:
   - Fridge Scene
   - Fridge
   - Towel
+  - OpenDoorScene
+  - Bonus
+  - Audio
   layers:
   - Default
   - TransparentFX

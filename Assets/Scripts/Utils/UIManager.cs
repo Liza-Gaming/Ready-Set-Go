@@ -13,6 +13,9 @@ public class UIManager : MonoBehaviour
     public Text mission;
     [SerializeField] public List<TextMeshProUGUI> taskTexts = new List<TextMeshProUGUI>();
     public Color completedTaskColor = new Color(0.5f, 0.7f, 0.2f, 1f);
+    [SerializeField] public TextMeshProUGUI endMission;
+    [SerializeField] public TextMeshProUGUI bonusText;
+
 
     private void Awake()
     {

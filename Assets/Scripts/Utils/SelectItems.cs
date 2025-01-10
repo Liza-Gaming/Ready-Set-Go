@@ -9,6 +9,13 @@ public class SelectItems : MonoBehaviour
     public GameObject[] interactableObjects;
     public Text feedbackText;
     [SerializeField] public int items;
+
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     public void ObjectSelected(GameObject selectedObject)
     {
 
@@ -16,6 +23,7 @@ public class SelectItems : MonoBehaviour
         // Assuming the "correct" objects have specific names or tags
         if (selectedObject.tag == "Collectable")
         {
+            audioManager.PlaySFX(audioManager.rightChoise);
             feedbackText.color = Color.green;
             selectedObject.SetActive(false);
             feedbackText.text = "Correct choice!";
@@ -23,6 +31,7 @@ public class SelectItems : MonoBehaviour
         }
         else
         {
+            audioManager.PlaySFX(audioManager.wrongChoise);
             feedbackText.color = Color.red;
             feedbackText.text = "Wrong choice! Try again.";
             StartCoroutine(ShowFeedback());

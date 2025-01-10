@@ -8,6 +8,7 @@ public class SceneController : MonoBehaviour
     public ButtonHandler buttonHandler;
     private HashSet<string> loadedScenes = new HashSet<string>();
     [SerializeField] private int numOfTasks = 5;
+    [SerializeField] private GameObject finalScene;
 
     private void Awake()
     {
@@ -45,6 +46,15 @@ public class SceneController : MonoBehaviour
         if (scene.buildIndex == 1)
         {
             buttonHandler.OnPointerUp();
+        }
+        if(loadedScenes.Count == numOfTasks && scene.buildIndex == 1)
+        {
+            finalScene.SetActive(true);
+            UIManager.instance.endMission.gameObject.SetActive(true);
+        }
+        else
+        {
+            UIManager.instance.endMission.gameObject.SetActive(false);
         }
     }
 }
