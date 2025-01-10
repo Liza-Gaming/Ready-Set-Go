@@ -37,7 +37,8 @@ Assets/
 │   ├── Fridge
 │   ├── Wardrobe
 │   ├── Desk
-│   └── Towel
+│   ├── Towel
+|   └── OpenDoor
 │
 ├── Scripts/
 │   ├── Desk Scene/
