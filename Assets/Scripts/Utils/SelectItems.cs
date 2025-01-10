@@ -59,11 +59,11 @@ public class SelectItems : MonoBehaviour
             feedbackText.color = Color.green;
             feedbackText.text = "Level Completed!";
             StartCoroutine(ShowFeedback());
-            if(sceneName == "OpenDoor")
+            if (sceneName == "OpenDoor")
             {
                 SceneManager.LoadScene("Win");
             }
-            else 
+            else
             {
                 audioManager.PlaySFX(audioManager.rightChoise);
                 SceneManager.LoadScene("SampleScene");
