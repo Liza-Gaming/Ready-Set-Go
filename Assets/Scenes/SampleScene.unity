@@ -10408,8 +10408,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.06, y: 2.52, z: 1}
-  m_Center: {x: 0, y: 0.45, z: 0.2}
+  m_Size: {x: 3.24, y: 3.18, z: 1}
+  m_Center: {x: -0.22, y: 0.69, z: 0.2}
 --- !u!82 &341553016
 AudioSource:
   m_ObjectHideFlags: 0
@@ -31445,6 +31445,7 @@ GameObject:
   - component: {fileID: 675453802}
   - component: {fileID: 675453801}
   - component: {fileID: 675453809}
+  - component: {fileID: 675453810}
   m_Layer: 0
   m_Name: 'Player '
   m_TagString: Player
@@ -31632,6 +31633,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8faa47dfd4631b043b32664c0ef552f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &675453810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675453800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae03cd330d07d054ca4b558dadf3313d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  gravity: -30
+  groundCheck: {fileID: 710753162}
+  ground:
+    serializedVersion: 2
+    m_Bits: 8
+  rotationSpeed: 180
+  cameraBob: {fileID: 660323593}
 --- !u!1001 &676318776
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38381,7 +38402,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Size: {x: 3, y: 3, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!114 &808101994
 MonoBehaviour:
@@ -45948,7 +45969,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 2, y: 3, z: 3}
   m_Center: {x: 0, y: -0.28, z: 0.2}
 --- !u!114 &961427102
 MonoBehaviour:
@@ -68885,7 +68906,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Size: {x: 3, y: 3, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!114 &1869777581
 MonoBehaviour:
@@ -74123,7 +74144,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 3, y: 3, z: 3}
   m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!1 &1893722183
 GameObject:
@@ -83514,7 +83535,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.5, y: 0.5, z: 0.5}
+  m_Size: {x: 3, y: 3, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!114 &2111071805
 MonoBehaviour:
