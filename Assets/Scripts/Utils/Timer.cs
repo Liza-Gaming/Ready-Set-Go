@@ -21,6 +21,11 @@ public class Timer : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded; // Subscribe to the sceneLoaded event
+            if (TimerSettings.TimeHasBeenSet)
+            {
+                SetInitialTime(TimerSettings.ChosenTimeInSeconds);
+                TimerSettings.TimeHasBeenSet = false; // Reset the flag
+            }
         }
         else
         {
@@ -33,6 +38,14 @@ public class Timer : MonoBehaviour
     {
         SceneManager.sceneLoaded -= OnSceneLoaded; // Unsubscribe when destroyed
     }
+
+    public void SetInitialTime(float newTime)
+    {
+        remainingTime = newTime;
+        timerIsActive = true; // Make sure the timer is active
+        UpdateTimerUI();
+    }
+
 
     void Update()
     {
@@ -69,5 +82,11 @@ public class Timer : MonoBehaviour
             timerText.gameObject.SetActive(false); // Hide timer UI
             background.gameObject.SetActive(false);
         }
+    }
+
+    public void ResetTimer()
+    {
+        timerIsActive = false;
+        UpdateTimerUI();
     }
 }

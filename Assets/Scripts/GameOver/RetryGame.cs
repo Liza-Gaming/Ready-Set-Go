@@ -1,23 +1,27 @@
 using UnityEngine;
-
-using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class RetryGame : MonoBehaviour
 {
-    public Button retry;  // Assign through inspector
 
-    void Start()
+    public void PlayAgain()
     {
-        if (retry != null)
+        if (SceneController.instance != null)
         {
-            retry.onClick.AddListener(OnButtonClick); // Add listener for button click
+            SceneController.instance.Reset();
         }
-    }
-
-    public void OnButtonClick()
-    {
-        SceneManager.LoadScene("Intro"); // Load the scene named "SampleScene"
+        if (PlayerManager.instance != null)
+        {
+            PlayerManager.instance.Reset();
+        }
+        if (Timer.Instance != null)
+        {
+            Timer.Instance.ResetTimer();
+        }
+        if (UIManager.instance != null)
+        {
+            UIManager.instance.Reset();
+        }
+        SceneManager.LoadScene("Intro"); // The main scene to start again
     }
 }

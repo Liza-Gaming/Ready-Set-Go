@@ -9,6 +9,7 @@ public class SceneController : MonoBehaviour
     private HashSet<string> loadedScenes = new HashSet<string>();
     [SerializeField] private int numOfTasks = 5;
     [SerializeField] private GameObject finalScene;
+    private string nextSceneName;
 
     private void Awake()
     {
@@ -27,6 +28,11 @@ public class SceneController : MonoBehaviour
     public bool IsSceneLoaded(string sceneName)
     {
         return loadedScenes.Contains(sceneName);
+    }
+
+    public void SetNextSceneName(string sceneName)
+    {
+        nextSceneName = sceneName;
     }
 
     public void MarkSceneAsLoaded(string sceneName)
@@ -56,5 +62,13 @@ public class SceneController : MonoBehaviour
         {
             UIManager.instance.endMission.gameObject.SetActive(false);
         }
+    }
+
+    public void Reset()
+    {
+        loadedScenes.Clear();
+        finalScene.SetActive(false);
+        Destroy(gameObject);
+        instance = null;
     }
 }

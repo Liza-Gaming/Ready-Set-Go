@@ -26,6 +26,7 @@ public class ButtonHandler : MonoBehaviour
         if (forwardPressed)
         {
             movement.MoveForward(true);
+            cameraBob.SetBobbing(true);
         }
     }
 }

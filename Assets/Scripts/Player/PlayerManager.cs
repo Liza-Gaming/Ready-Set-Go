@@ -16,4 +16,11 @@ public class PlayerManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public void Reset()
+    {
+        Destroy(gameObject);
+        instance = null;
+    }
+
 }

@@ -14,7 +14,10 @@ public class SceneLoader : MonoBehaviour
             {
                 SceneController.instance.MarkSceneAsLoaded(sceneName);
                 UIManager.instance.MarkTaskAsDone(sceneName);
-                Destroy(gameObject);
+                if (sceneName != "OpenDoor")
+                {
+                    Destroy(gameObject);
+                }
                 SceneManager.LoadScene(sceneName);
             }
         }

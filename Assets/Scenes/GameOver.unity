@@ -596,9 +596,9 @@ RectTransform:
   - {fileID: 1524123954}
   m_Father: {fileID: 2138768877}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -88.2}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 124}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605318442
@@ -647,7 +647,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1617587048}
         m_TargetAssemblyTypeName: RetryGame, Assembly-CSharp
-        m_MethodName: OnButtonClick
+        m_MethodName: PlayAgain
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -724,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3174a19b4b523b409bfa325290880cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  retry: {fileID: 1605318442}
+  initialTime: 300
 --- !u!4 &1617587049
 Transform:
   m_ObjectHideFlags: 0

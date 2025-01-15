@@ -35,6 +35,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: e759be66416190c4897aba2935a84682
+  - enabled: 1
+    path: Assets/Scenes/ChooseTime.unity
+    guid: 4d31d7a638e8abd4388cf25fe9fcbf3f
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: 70628b505d0d88844960b5035cdfa073
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
   m_UseUCBPForAssetBundles: 0

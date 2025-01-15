@@ -55,4 +55,11 @@ public class UIManager : MonoBehaviour
         }
         Debug.LogWarning("No task found with tag: " + sceneName);
     }
+
+    public void Reset()
+    {
+        taskTexts.Clear();
+        Destroy(gameObject);
+        instance = null;
+    }
 }
