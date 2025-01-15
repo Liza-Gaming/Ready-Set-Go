@@ -65,6 +65,7 @@ Assets/
 │   ├── Player/
 │   │   ├── MoveLogic/
 │   │   │   ├── CameraBob.cs
+|   |   |   ├── KeyBoardController.cs
 │   │   │   └── Movement.cs
 │   │   ├── ButtonHandler.cs
 │   │   ├── PlayerManager.cs
