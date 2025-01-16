@@ -397,8 +397,8 @@ MonoBehaviour:
   instructionImage: {fileID: 1459841698}
   instructionSprites:
   - {fileID: 21300000, guid: ac1824686c6e2be42a4ecb8c9ec1d7b4, type: 3}
-  - {fileID: 21300000, guid: 0c8c4b489365e664b8c6da812c22a1dd, type: 3}
-  - {fileID: 21300000, guid: 4504cc3fd98232540b682803565b3875, type: 3}
+  - {fileID: 21300000, guid: de1351fa21c3b354b8959b5161478e25, type: 3}
+  - {fileID: 21300000, guid: e804099bdf4f2c443a8bea480c557cfd, type: 3}
   - {fileID: 21300000, guid: 3a0e45593f0b59b4c8bb78d62e61ec38, type: 3}
   nextSceneName: ChooseTime
 --- !u!4 &657476962

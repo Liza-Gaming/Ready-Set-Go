@@ -836,7 +836,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.91526663
+      value: 0.92007166
       objectReference: {fileID: 0}
     - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: m_LocalRotation.x
@@ -844,11 +844,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.40284872
+      value: -0.39175028
       objectReference: {fileID: 0}
     - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -47.513
+      value: -46.127
       objectReference: {fileID: 0}
     - target: {fileID: 9077926073120308842, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -1295,7 +1295,7 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 4.293001, y: 9.811817, z: 1.1340002}
   m_Center: {x: 2.1465616, y: 4.9058986, z: 3.05036e-14}
@@ -1327,8 +1327,8 @@ HingeJoint:
   m_ExtendedLimits: 1
   m_UseAcceleration: 0
   m_Limits:
-    min: -150
-    max: 150
+    min: -110
+    max: 110
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -11917,6 +11917,22 @@ PrefabInstance:
     - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9784598
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.20643798
+      objectReference: {fileID: 0}
+    - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -23.827
       objectReference: {fileID: 0}
     - target: {fileID: 9077926073120308842, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -38402,7 +38418,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 0.5}
+  m_Size: {x: 2.27, y: 2.76, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!114 &808101994
 MonoBehaviour:
@@ -38893,8 +38909,8 @@ HingeJoint:
   m_ExtendedLimits: 1
   m_UseAcceleration: 0
   m_Limits:
-    min: -150
-    max: 150
+    min: -110
+    max: 110
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -46045,8 +46061,8 @@ HingeJoint:
   m_ExtendedLimits: 1
   m_UseAcceleration: 0
   m_Limits:
-    min: -150
-    max: 150
+    min: -110
+    max: 110
     bounciness: 0
     bounceMinVelocity: 0.2
     contactDistance: 0
@@ -68906,7 +68922,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 0.5}
+  m_Size: {x: 2.18, y: 2.2, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!114 &1869777581
 MonoBehaviour:
@@ -74144,7 +74160,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3, y: 3, z: 3}
+  m_Size: {x: 2.71, y: 2.44, z: 3}
   m_Center: {x: 0, y: 0, z: 0.2}
 --- !u!1 &1893722183
 GameObject:
@@ -74427,7 +74443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8234557
+      value: 0.9240697
       objectReference: {fileID: 0}
     - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: m_LocalRotation.x
@@ -74435,11 +74451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.56738055
+      value: -0.382224
       objectReference: {fileID: 0}
     - target: {fileID: 2647898422681595148, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -69.136
+      value: -44.943
       objectReference: {fileID: 0}
     - target: {fileID: 9077926073120308842, guid: dad6bc4789c2de345a6aeca67f897b22, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

@@ -14828,7 +14828,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2923ef2ee64bb044f934ac1d3d38e21c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec67f5bf1c55fbd4ba49d07f68c711b0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17325,9 +17325,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 15
+  m_MaxValue: 8
   m_WholeNumbers: 0
-  m_Value: 15
+  m_Value: 8
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -18703,7 +18703,7 @@ MonoBehaviour:
   timerslider: {fileID: 1441308844}
   stopTimer: 0
   isTimerRunning: 0
-  maxTime: 15
+  maxTime: 8
   textToShow: {fileID: 445388809}
 --- !u!43 &2086596901
 Mesh:
