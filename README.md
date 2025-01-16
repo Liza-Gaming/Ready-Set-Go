@@ -38,10 +38,15 @@ Assets/
 │   ├── Wardrobe
 │   ├── Desk
 │   ├── Towel
-|   └── OpenDoor
-│
+|   ├── OpenDoor
+|   ├── Instractions
+|   ├── ChooseTime
+|   ├── GameOver
+|   └── Win
+|
 ├── Scripts/
-│   ├── Desk Scene/
+│   ├── RetryGame/
+|   |   └── RetryGame.cs
 │   │
 │   ├── Intro Scene/
 │   │   ├── ButtonScript.cs
@@ -60,7 +65,15 @@ Assets/
 │   │   ├── Mover.cs
 │   │   └── Prefabs/
 │   │
-│   ├── Towel Scene/
+│   ├── Instructions/
+|   |   └── slideshow.cs
+|   |   
+|   ├── OpenDoorScene/
+|   |    └── HoverDisplay.cs   
+|   |
+|   ├── ChooseTimeScene/
+|   |    ├── TimeSettings.cs
+|   |    └── TimeSelectionManager.cs
 │   │
 │   ├── Player/
 │   │   ├── MoveLogic/
@@ -76,6 +89,7 @@ Assets/
 │   │   ├── SceneController.cs
 │   │   ├── SceneLoader.cs
 │   │   ├── SliderBar.cs
+|   |   ├── TaskInstructions.cs
 │   │   ├── Timer.cs
 │   │   ├── UIManager.cs
 │   │   ├── Selection.cs
