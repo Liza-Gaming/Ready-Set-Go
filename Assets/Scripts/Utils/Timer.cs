@@ -2,15 +2,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-/**
- * I learned from this video: https://www.youtube.com/watch?v=POq1i8FyRyQ&ab_channel=RehopeGames
- */
 public class Timer : MonoBehaviour
 {
     [SerializeField] private Text timerText;
     [SerializeField] private Image background;
     [SerializeField] private float remainingTime;
     private bool timerIsActive = false; // Control the timer's active state
+    private float initialTime; // To store the initial chosen time
 
     public static Timer Instance { get; private set; }
 
@@ -41,24 +39,23 @@ public class Timer : MonoBehaviour
 
     public void SetInitialTime(float newTime)
     {
+        initialTime = newTime;
         remainingTime = newTime;
         timerIsActive = true; // Make sure the timer is active
         UpdateTimerUI();
     }
-
 
     void Update()
     {
         if (timerIsActive && remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;
+            UpdateTimerUI();
         }
-        else if (remainingTime < 1)
+        else if (remainingTime <= 0)
         {
-            SceneManager.LoadScene("GameOver");
+            LoadWinScene();
         }
-
-        UpdateTimerUI();
     }
 
     private void UpdateTimerUI()
@@ -66,6 +63,17 @@ public class Timer : MonoBehaviour
         int minutes = Mathf.FloorToInt(remainingTime / 60);
         int seconds = Mathf.FloorToInt(remainingTime % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    private void LoadWinScene()
+    {
+        timerIsActive = false; // Stop the timer
+        SceneManager.LoadScene("WinScene"); // Load the Win scene
+    }
+
+    public float GetElapsedTime()
+    {
+        return initialTime - remainingTime; // Calculate elapsed time
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
