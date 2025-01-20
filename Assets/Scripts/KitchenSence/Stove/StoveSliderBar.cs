@@ -72,8 +72,8 @@ public class StoveSliderBar : SliderBar
 
     private IEnumerator ShowFeedbackAndReset()
     {
+        ResetTimer();
         yield return new WaitForSeconds(2);
         textToShow.text = "Press the button on time!";
-        ResetTimer();
     }
 }
