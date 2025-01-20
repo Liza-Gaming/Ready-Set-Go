@@ -16,18 +16,15 @@ public class slideshow : MonoBehaviour
             instructionImage.sprite = instructionSprites[currentIndex];
     }
 
-    void Update()
+    public void NextImage()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space)) // Detects mouse click
+        if (currentIndex < instructionSprites.Length - 1)
         {
-            if (currentIndex < instructionSprites.Length - 1)
-            {
-                StartCoroutine(FadeImage());
-            }
-            else
-            {
-                SceneManager.LoadScene(nextSceneName); // Load next scene
-            }
+            StartCoroutine(FadeImage());
+        }
+        else
+        {
+            SceneManager.LoadScene(nextSceneName); // Load next scene
         }
     }
 

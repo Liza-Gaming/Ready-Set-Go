@@ -1378,9 +1378,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 8
+  m_MaxValue: 11
   m_WholeNumbers: 0
-  m_Value: 8
+  m_Value: 11
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1887,10 +1887,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 293570644}
   - {fileID: 1791426271}
   - {fileID: 1613384125}
   - {fileID: 795937479}
+  - {fileID: 293570644}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7409,7 +7409,7 @@ MonoBehaviour:
   timerslider: {fileID: 293570645}
   stopTimer: 0
   isTimerRunning: 0
-  maxTime: 8
+  maxTime: 11
   textToShow: {fileID: 1791426272}
   displayImage: {fileID: 1865009890}
 --- !u!1 &1907071403

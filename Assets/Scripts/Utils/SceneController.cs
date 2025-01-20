@@ -11,6 +11,19 @@ public class SceneController : MonoBehaviour
     [SerializeField] private GameObject finalScene;
     private string nextSceneName;
 
+    [SerializeField]
+    private List<string> relevantScenes = new List<string>();
+
+    // Store mission descriptions
+    private Dictionary<string, string> missionDescriptions = new Dictionary<string, string>
+    {
+        { "Stove", "Are you hungry for brakfast?" },
+        { "Fridge", "Everyone loves cold, refreshing fruits." },
+        { "Wardrobe", "Where do you find clothes?" },
+        { "Desk", "Don't forget the things on the table!" },
+        { "Towel", "Towel is needed not only after a bath." }
+    };
+
     private void Awake()
     {
         if (instance == null)
@@ -40,6 +53,21 @@ public class SceneController : MonoBehaviour
         loadedScenes.Add(sceneName);
     }
 
+    public string GetFirstUnloadedSceneDescription()
+    {
+        foreach (string sceneName in relevantScenes)
+        {
+            if (!loadedScenes.Contains(sceneName))
+            {
+                if (missionDescriptions.TryGetValue(sceneName, out string description))
+                {
+                    return description;
+                }
+            }
+        }
+        return "All missions are completed.";
+    }
+
     private void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
@@ -62,6 +90,12 @@ public class SceneController : MonoBehaviour
         {
             UIManager.instance.endMission.gameObject.SetActive(false);
         }
+    }
+
+    public void OnHintButtonClicked()
+    {
+        string missionText = SceneController.instance.GetFirstUnloadedSceneDescription();
+        UIManager.instance.ShowHint(missionText);
     }
 
     public void Reset()

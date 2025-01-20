@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
@@ -9,6 +10,7 @@ public class UIManager : MonoBehaviour
     public static UIManager instance;
 
     [SerializeField] private List<GameObject> arrowUI;
+    public GameObject hint;
     public GameObject paper;
     public Text mission;
     [SerializeField] public List<TextMeshProUGUI> taskTexts = new List<TextMeshProUGUI>();
@@ -16,6 +18,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] public TextMeshProUGUI endMission;
     [SerializeField] public TextMeshProUGUI bonusText;
 
+    private Coroutine hintCoroutine;
 
     private void Awake()
     {
@@ -36,6 +39,7 @@ public class UIManager : MonoBehaviour
         {
             if (arrow != null) arrow.SetActive(showArrows);
         }
+        if (hint != null) hint.SetActive(showArrows);
     }
 
     public void ShowTasks(bool show)
@@ -54,6 +58,31 @@ public class UIManager : MonoBehaviour
             }
         }
         Debug.LogWarning("No task found with tag: " + sceneName);
+    }
+
+    public void UpdateMissionText(string missionText)
+    {
+        if (mission != null)
+        {
+            mission.text = missionText;
+        }
+    }
+
+    public void ShowHint(string hintText)
+    {
+        if (hintCoroutine != null)
+        {
+            StopCoroutine(hintCoroutine);
+        }
+        hintCoroutine = StartCoroutine(DisplayHintForSeconds(hintText, 5f));
+    }
+
+    private IEnumerator DisplayHintForSeconds(string hintText, float duration)
+    {
+        mission.text = hintText;
+        mission.gameObject.SetActive(true);
+        yield return new WaitForSeconds(duration);
+        mission.gameObject.SetActive(false);
     }
 
     public void Reset()
