@@ -98,6 +98,7 @@ Assets/
 │   │   ├── SliderController.cs
 │   │   ├── MissionTrigger.cs
 │   │   ├── DisplayImage.cs
+|   |   ├── DoorInteraction.cs
 │   │   └── AudioManager.cs
 │   │
 └── └── UI/
