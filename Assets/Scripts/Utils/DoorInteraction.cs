@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Got help from chat GPT and this video: https://www.youtube.com/watch?v=smlgtS07jaQ&ab_channel=MartinDev
 public class DoorInteraction : MonoBehaviour
 {
     public float openAngle = 90f;
