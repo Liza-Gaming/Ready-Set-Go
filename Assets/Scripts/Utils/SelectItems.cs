@@ -8,8 +8,11 @@ public class SelectItems : MonoBehaviour
 {
     public GameObject[] interactableObjects;
     public Text feedbackText;
+    [Tooltip("The maximum number of items that can be taken in the scene")]
     [SerializeField] public int items;
     [SerializeField] private string sceneName;
+    [SerializeField]
+    private Material material;
     AudioManager audioManager;
 
     private void Awake()
@@ -67,6 +70,22 @@ public class SelectItems : MonoBehaviour
             {
                 audioManager.PlaySFX(audioManager.rightChoise);
                 SceneManager.LoadScene("SampleScene");
+            }
+        }
+    }
+
+    public void ResetObjects()
+    {
+        foreach (var obj in interactableObjects)
+        {
+            if (!obj.active)
+            {
+                Renderer renderer = obj.GetComponent<Renderer>();
+                if (renderer != null)
+                {
+                    renderer.material = material;
+                }
+                obj.SetActive(true); // Reactivate all objects
             }
         }
     }

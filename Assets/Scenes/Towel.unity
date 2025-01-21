@@ -7364,6 +7364,7 @@ MonoBehaviour:
   feedbackText: {fileID: 1791426272}
   items: 1
   sceneName: Towel
+  material: {fileID: 2100000, guid: fb698345bbbc4d74ba2ca7b2bb59eb9d, type: 2}
 --- !u!4 &1865009889
 Transform:
   m_ObjectHideFlags: 0
@@ -7412,6 +7413,7 @@ MonoBehaviour:
   maxTime: 11
   textToShow: {fileID: 1791426272}
   displayImage: {fileID: 1865009890}
+  selectItems: {fileID: 1865009888}
 --- !u!1 &1907071403
 GameObject:
   m_ObjectHideFlags: 0

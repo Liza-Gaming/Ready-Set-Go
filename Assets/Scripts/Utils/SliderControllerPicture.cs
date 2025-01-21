@@ -6,6 +6,7 @@ public class SliderControllerPicture : SliderBar
 {
     [SerializeField] public Text textToShow;
     public DisplayImage displayImage; // Reference to the DisplayImage component
+    public SelectItems selectItems; // Reference to the SelectItems component
 
     protected override void Start()
     {
@@ -29,6 +30,7 @@ public class SliderControllerPicture : SliderBar
         yield return new WaitForSeconds(2);
         textToShow.text = "";
         ResetTimer();
+        selectItems.ResetObjects(); // Reset unactivated objects
         displayImage.StartDisplay(); // Display the image again
     }
 }

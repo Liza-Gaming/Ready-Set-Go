@@ -18676,6 +18676,7 @@ MonoBehaviour:
   feedbackText: {fileID: 445388809}
   items: 2
   sceneName: Desk
+  material: {fileID: 2100000, guid: 93c858fe621f02942990041696586443, type: 2}
 --- !u!114 &2037693173
 MonoBehaviour:
   m_ObjectHideFlags: 0
