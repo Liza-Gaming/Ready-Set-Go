@@ -135,6 +135,8 @@ Assets/
 
 [כפתורים וסמלים](https://assetstore.unity.com/packages/2d/gui/icons/fun-hyper-casual-ui-pack-free-302632)
 
+כלי עיצוב -[Canva](https://www.canva.com/)
+
 **סאונדים**
 
 [סאונדים](https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116)
