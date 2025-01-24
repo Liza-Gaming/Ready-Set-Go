@@ -3,7 +3,7 @@
 
 מחפשים חוויה שמאחדת תשוקה למשחקים עם מטרה חשובה? הצטרפו להרפתקה שתשפר את כישורי ההתארגנות שלכם ותעניק לכם עצמאות אמיתית - ברוכים הבאים ל'היכון, הכן צא!'.
 
-[שחקו במשחק](https://lizachep.itch.io/final-game-house)
+[שחקו במשחק](https://lizachep.itch.io/final-game-house), [טריילר](https://www.youtube.com/watch?v=IuT27F8H6o8&ab_channel=LizaChepurko)
 
 
 ![Screenshot 2024-12-15 212018](https://github.com/user-attachments/assets/ac7cac38-557c-46ac-bda6-3d7f59f225df)
@@ -113,17 +113,11 @@ Assets/
 
 **נכסים**
 
-[נכסי רהיטים](https://kenney.nl/assets/furniture-kit)
-
-[נכסי אוכל](https://kenney.nl/assets/food-kit)
-
-[נכסים נוספים](https://assetstore.unity.com/packages/3d/props/simple-free-beach-models-287370)
+[נכסי רהיטים](https://kenney.nl/assets/furniture-kit), [נכסי אוכל](https://kenney.nl/assets/food-kit), [נכסים נוספים](https://assetstore.unity.com/packages/3d/props/simple-free-beach-models-287370)
 
 **טקסטורות**
 
-[מטבח](https://assetstore.unity.com/packages/3d/props/furniture/kitchen-furniture-starterpack-209331)
-
-[חומרים](https://assetstore.unity.com/packages/3d/props/p3d-indoor-design-starter-kit-3d-models-furniture-264116)
+[מטבח](https://assetstore.unity.com/packages/3d/props/furniture/kitchen-furniture-starterpack-209331), [חומרים](https://assetstore.unity.com/packages/3d/props/p3d-indoor-design-starter-kit-3d-models-furniture-264116)
 
 **פני שטח**
 
@@ -131,15 +125,15 @@ Assets/
 
 **ממשק**
 
-[פונט פיקסלים](https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059)
-
-[כפתורים וסמלים](https://assetstore.unity.com/packages/2d/gui/icons/fun-hyper-casual-ui-pack-free-302632)
-
-כלי עיצוב -[Canva](https://www.canva.com/)
+[פונט פיקסלים](https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059), [כפתורים וסמלים](https://assetstore.unity.com/packages/2d/gui/icons/fun-hyper-casual-ui-pack-free-302632), כלי עיצוב -[Canva](https://www.canva.com/)
 
 **סאונדים**
 
 [סאונדים](https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116)
+
+**טריילר משחק**
+[animaker](https://www.animaker.com/)
+
 
 ## פיתוח
 
