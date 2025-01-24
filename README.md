@@ -98,13 +98,50 @@ Assets/
 │   │   ├── SliderController.cs
 │   │   ├── MissionTrigger.cs
 │   │   ├── DisplayImage.cs
+|   |   ├── DoorInteraction.cs
 │   │   └── AudioManager.cs
 │   │
 └── └── UI/
 ```
 
 
+# תודות
 
+**קודים**
+
+ברצוני להודות למגוון המשאבים הזמינים בפלטפורמות כמו YouTube וצ'אט GPT, שהיו לי לעזר רב לאורך תהליך הפיתוח. כל סקריפט שנעשה בו שימוש ונכתב על ידי יוצרים אחרים תועד כראוי בתיעוד הקוד. אני אסירת תודה על הידע הרב שזכיתי ללמוד במסע המיוחד הזה.
+
+**נכסים**
+
+[נכסי רהיטים](https://kenney.nl/assets/furniture-kit)
+
+[נכסי אוכל](https://kenney.nl/assets/food-kit)
+
+[נכסים נוספים](https://assetstore.unity.com/packages/3d/props/simple-free-beach-models-287370)
+
+**טקסטורות**
+
+[מטבח](https://assetstore.unity.com/packages/3d/props/furniture/kitchen-furniture-starterpack-209331)
+
+[חומרים](https://assetstore.unity.com/packages/3d/props/p3d-indoor-design-starter-kit-3d-models-furniture-264116)
+
+**פני שטח**
+
+[פני שטח](https://assetstore.unity.com/publishers/57553)
+
+**ממשק**
+
+[פונט פיקסלים](https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059)
+
+[כפתורים וסמלים](https://assetstore.unity.com/packages/2d/gui/icons/fun-hyper-casual-ui-pack-free-302632)
+
+כלי עיצוב -[Canva](https://www.canva.com/)
+
+**סאונדים**
+
+[סאונדים](https://assetstore.unity.com/packages/audio/sound-fx/free-casual-game-sfx-pack-54116)
+
+## פיתוח
 
 **פיתוח המשחק:** אליזבט צ'פורקו
 
