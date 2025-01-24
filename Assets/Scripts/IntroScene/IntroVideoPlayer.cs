@@ -12,7 +12,7 @@ public class IntroVideoPlayer : MonoBehaviour
         videoPlayer.source = VideoSource.Url;
 
         // Combine path to StreamingAssets folder
-        string videoPath = Path.Combine(Application.streamingAssetsPath, "Untitled video - Made with Clipchamp.mp4");
+        string videoPath = Path.Combine(Application.streamingAssetsPath, "Intro.mp4");
 
         // On Windows, backslashes can cause issues in a URL, so replace them
         videoPath = videoPath.Replace("\\", "/");

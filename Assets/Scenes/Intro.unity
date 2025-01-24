@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 392287601}
   - component: {fileID: 392287603}
   m_Layer: 0
-  m_Name: VidoPlayer
+  m_Name: ViedoPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -365,7 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadSceneButton: {fileID: 760328139}
   skip: {fileID: 1127401664}
-  delayTime: 32
+  delayTime: 25
 --- !u!4 &816158982
 Transform:
   m_ObjectHideFlags: 0
@@ -415,9 +415,9 @@ RectTransform:
   - {fileID: 1485190288}
   m_Father: {fileID: 1426183935}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -106.9, y: -81.4}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -45.84836, y: 34.1342}
   m_SizeDelta: {x: 91.69672, y: 68.2684}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1127401664
@@ -942,7 +942,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u05DC \u05D7\u05E6\u05D5 \u05E2\u05DC\u05D9\u05D9"
+  m_text: "\u05E9\u05D7\u05E7\u05D5!"
   m_isRightToLeft: 1
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
