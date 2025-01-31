@@ -10,7 +10,7 @@ public class SceneController : MonoBehaviour
     [SerializeField] private int numOfTasks = 5;
     [SerializeField] private GameObject finalScene;
     [SerializeField] private GameObject sunscreenObject;
-    [SerializeField] private GameObject purseObject;   
+    [SerializeField] private GameObject purseObject;
     private string nextSceneName;
 
     [SerializeField]

@@ -9,7 +9,8 @@ public class NavigateToHistory : MonoBehaviour
 
     private void Start()
     {
-        showHistoryButton.onClick.AddListener(() => {
+        showHistoryButton.onClick.AddListener(() =>
+        {
             SceneManager.LoadScene("HistoryScene");
         });
     }

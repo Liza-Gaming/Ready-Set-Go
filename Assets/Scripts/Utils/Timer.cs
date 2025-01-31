@@ -41,7 +41,7 @@ public class Timer : MonoBehaviour
     {
         initialTime = newTime;
         remainingTime = newTime;
-        timerIsActive = true; 
+        timerIsActive = true;
         UpdateTimerUI();
     }
 
@@ -62,8 +62,8 @@ public class Timer : MonoBehaviour
 
         if (remainingTime == 0 && timerIsActive)
         {
-            timerIsActive = false; 
-            SceneManager.LoadScene("GameOver"); 
+            timerIsActive = false;
+            SceneManager.LoadScene("GameOver");
         }
     }
 
@@ -99,7 +99,7 @@ public class Timer : MonoBehaviour
             timerText.gameObject.SetActive(false); // Hide timer UI
             background.gameObject.SetActive(false);
 
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
         else
         {
