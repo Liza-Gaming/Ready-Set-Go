@@ -41,7 +41,7 @@ public class Timer : MonoBehaviour
     {
         initialTime = newTime;
         remainingTime = newTime;
-        timerIsActive = true; // Make sure the timer is active
+        timerIsActive = true; 
         UpdateTimerUI();
     }
 
@@ -50,11 +50,20 @@ public class Timer : MonoBehaviour
         if (timerIsActive && remainingTime > 0)
         {
             remainingTime -= Time.deltaTime;
+
+            // Ensure the timer never goes below 0
+            if (remainingTime < 0)
+            {
+                remainingTime = 0;
+            }
+
             UpdateTimerUI();
         }
-        else if (remainingTime <= 0)
+
+        if (remainingTime == 0 && timerIsActive)
         {
-            LoadWinScene();
+            timerIsActive = false; 
+            SceneManager.LoadScene("GameOver"); 
         }
     }
 
@@ -83,6 +92,14 @@ public class Timer : MonoBehaviour
             timerIsActive = true; // Activate timer
             timerText.gameObject.SetActive(true); // Show timer UI
             background.gameObject.SetActive(true);
+        }
+        else if (scene.name == "GameOver")
+        {
+            timerIsActive = false; // Stop timer
+            timerText.gameObject.SetActive(false); // Hide timer UI
+            background.gameObject.SetActive(false);
+
+            Destroy(gameObject); 
         }
         else
         {

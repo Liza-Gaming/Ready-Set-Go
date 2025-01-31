@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
@@ -9,6 +9,8 @@ public class SceneController : MonoBehaviour
     private HashSet<string> loadedScenes = new HashSet<string>();
     [SerializeField] private int numOfTasks = 5;
     [SerializeField] private GameObject finalScene;
+    [SerializeField] private GameObject sunscreenObject;
+    [SerializeField] private GameObject purseObject;   
     private string nextSceneName;
 
     [SerializeField]
@@ -51,6 +53,11 @@ public class SceneController : MonoBehaviour
     public void MarkSceneAsLoaded(string sceneName)
     {
         loadedScenes.Add(sceneName);
+        if (sceneName == "Desk") // Check if the Desk scene has been completed
+        {
+            sunscreenObject.SetActive(false); // Hide SunScreen
+            purseObject.SetActive(false);     // Hide Purse
+        }
     }
 
     public string GetFirstUnloadedSceneDescription()
@@ -65,7 +72,7 @@ public class SceneController : MonoBehaviour
                 }
             }
         }
-        return "All missions are completed.";
+        return "Go to the exit door.";
     }
 
     private void OnDestroy()
@@ -84,11 +91,6 @@ public class SceneController : MonoBehaviour
         if (loadedScenes.Count == numOfTasks && scene.buildIndex == 1)
         {
             finalScene.SetActive(true);
-            UIManager.instance.endMission.gameObject.SetActive(true);
-        }
-        else
-        {
-            UIManager.instance.endMission.gameObject.SetActive(false);
         }
     }
 

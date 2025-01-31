@@ -7,6 +7,12 @@ public class TimeSelectionManager : MonoBehaviour
     {
         TimerSettings.ChosenTimeInSeconds = timeInMinutes * 60; // Convert minutes to seconds
         TimerSettings.TimeHasBeenSet = true;
-        SceneManager.LoadScene("SampleScene"); // Load the SampleScene where the Timer will be instantiated
+
+        // Save chosen time for future reference
+        PlayerPrefs.SetInt("ChosenTime", (int)timeInMinutes);
+        PlayerPrefs.Save();
+
+        // Load game scene
+        SceneManager.LoadScene("SampleScene");
     }
 }

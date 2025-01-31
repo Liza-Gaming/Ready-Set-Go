@@ -32,7 +32,7 @@ public class DoorInteraction : MonoBehaviour
     {
         if (_playerTransform != null && Vector3.Distance(_playerTransform.position, transform.position) <= activationRadius)
         {
-            if (Input.GetMouseButtonDown(1)) // Right mouse button clicked
+            if (Input.GetMouseButtonDown(1) || Input.GetKey(KeyCode.Space)) // Right mouse button clicked
             {
                 if (_currentCoroutine != null) StopCoroutine(_currentCoroutine);
                 _currentCoroutine = StartCoroutine(ToggleDoor());

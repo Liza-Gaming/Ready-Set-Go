@@ -46,12 +46,12 @@ public class KeyBoardControll : MonoBehaviour
         if (Input.GetKey(KeyCode.UpArrow))
         {
             velocity = transform.forward * speed;
-            //cameraBob.SetBobbing(true);
+            cameraBob.SetBobbing(true);
         }
         else
         {
             velocity = Vector3.zero;
-            //cameraBob.SetBobbing(false);
+            cameraBob.SetBobbing(false);
         }
 
         // Rotational movement

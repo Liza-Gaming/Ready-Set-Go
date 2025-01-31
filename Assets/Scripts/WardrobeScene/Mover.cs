@@ -28,7 +28,6 @@ public class Mover : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.rotation = Quaternion.Euler(-90, 0, 0);
         this.transform.position = SetZ(this.transform.position, PlayerPos.position.z);
     }
 

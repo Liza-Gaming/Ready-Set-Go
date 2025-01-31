@@ -339,11 +339,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7160438560098406742, guid: 7cb687ce850f4264283bd6319ea397e7, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5.0103197
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: -7160438560098406742, guid: 7cb687ce850f4264283bd6319ea397e7, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2.9542809
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: -7160438560098406742, guid: 7cb687ce850f4264283bd6319ea397e7, type: 3}
       propertyPath: m_LocalScale.z
@@ -764,15 +764,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToSpawn:
-  - {fileID: 4695877299252942434, guid: 639ce9b2669d22b42bd2d809c591adc7, type: 3}
-  - {fileID: 3425700356640102901, guid: f3d7a3dad53b6f34b97317a6f99357d4, type: 3}
-  - {fileID: 3145417635103185280, guid: 3529db95c91e89340b8d040237a433b9, type: 3}
-  - {fileID: 6391913401487895765, guid: d22abedb582905f43ac125b0580734ba, type: 3}
-  - {fileID: 7965013282546290129, guid: 6be938d1dc2581547ac4d72054fd3c41, type: 3}
-  - {fileID: 5033832081049030824, guid: 16a54c0ea5a4b7d44a3c399b802f4f0b, type: 3}
-  - {fileID: 3174753489975256099, guid: 90cef61b080a65b448edea7724735811, type: 3}
-  - {fileID: 3557311436823203984, guid: b223327ab0acb0f4987a1022d0a733e1, type: 3}
-  - {fileID: 2550161367452501918, guid: b21941ce7bf068642b46edd590170b98, type: 3}
+  - {fileID: 1750218411400927559, guid: 69ee41bac352568419d1574f5b2d1395, type: 3}
+  - {fileID: 4425205819864638077, guid: 7ab4f99b9e1e8874a9a5e956ddefda47, type: 3}
+  - {fileID: 8879335026978227249, guid: d6e19aabd08e0f5489b5a1642e6aba7a, type: 3}
+  - {fileID: 3324705056327761133, guid: 15941d236058f254eaf76537d96ade65, type: 3}
+  - {fileID: 4809504214959922927, guid: 2dbbe91cf5a8df14e8b9e51e2b490849, type: 3}
+  - {fileID: 9208957619934203311, guid: 8c2291542d5f21640b3810671c12ec45, type: 3}
+  - {fileID: 5096265575550028793, guid: fca9fd3007fc17d46b2f2515be265ea8, type: 3}
+  - {fileID: 6981066477911224715, guid: 2c2037742472b0644b551c801dc4499e, type: 3}
   minTimeBetweenSpawns: 0.5
   maxTimeBetweenSpawns: 1.5
   maxXDistance: 5
@@ -818,7 +817,7 @@ Transform:
   m_GameObject: {fileID: 684136107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7989879, y: 7.108199, z: 3.4601045}
+  m_LocalPosition: {x: 3.7989879, y: 7.108199, z: 3.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -850,7 +849,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.12000004, y: 0.07, z: 0.12000002}
-  m_Center: {x: -0.00069100404, y: 0.06, z: 0.0010486476}
+  m_Center: {x: -0.00069100404, y: -0.01, z: 0.0010486476}
 --- !u!114 &906542363
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1188,7 +1187,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9d7dde53cdf82be4b891df0bba482240, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2252895b46fcb4e42af76043357944c7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1565,7 +1564,7 @@ MeshCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30

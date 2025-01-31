@@ -29,6 +29,7 @@ TagManager:
   - OpenDoorScene
   - Bonus
   - Audio
+  - TargetPoint
   layers:
   - Default
   - TransparentFX
