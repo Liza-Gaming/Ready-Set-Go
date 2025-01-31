@@ -42,7 +42,8 @@ Assets/
 |   ├── Instractions
 |   ├── ChooseTime
 |   ├── GameOver
-|   └── Win
+|   ├── Win
+|   └── HistoryScene
 |
 ├── Scripts/
 │   ├── RetryGame/
@@ -86,7 +87,15 @@ Assets/
 │   │   ├── HoverMove.cs
 │   │   └── MissionTrigger.cs
 │   │
+|   ├── RetryGame/
+|   |   ├── DisplayImageUI.cs
+|   |   ├── GameOverController.cs
+|   |   ├── NavigateToHistory.cs
+|   |   ├── RetryGame.cs
+|   |   └── WinSceneController.cs
+|   | 
 │   ├── Utils/
+|   |   ├── GameDataManager.cs
 │   │   ├── SceneController.cs
 │   │   ├── SceneLoader.cs
 │   │   ├── SliderBar.cs
