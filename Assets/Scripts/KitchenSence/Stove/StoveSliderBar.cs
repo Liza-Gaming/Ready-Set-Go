@@ -8,6 +8,7 @@ public class StoveSliderBar : SliderBar
     [SerializeField] public Text textToShow;
     [SerializeField] public float loweLimit = 0.85f;
     [SerializeField] public float upperLimit = 1.6f;
+    [SerializeField] private int failureCount = 3;
 
     AudioManager audioManager;
 
@@ -29,6 +30,7 @@ public class StoveSliderBar : SliderBar
         if (timerslider.value <= 0)
         {
             textToShow.text = "Too late";
+            IncreaseFailureCount(failureCount);
             stopTimer = true;
             StartCoroutine(ShowFeedbackAndReset());
         }
@@ -52,6 +54,7 @@ public class StoveSliderBar : SliderBar
         else if (timerslider.value < loweLimit)
         {
             textToShow.text = "Too late";
+            IncreaseFailureCount(failureCount);
             audioManager.PlaySFX(audioManager.wrongPress);
             stopTimer = true;
             StartCoroutine(ShowFeedbackAndReset());
@@ -59,6 +62,7 @@ public class StoveSliderBar : SliderBar
         else if (timerslider.value > upperLimit)
         {
             textToShow.text = "Too early";
+            IncreaseFailureCount(failureCount);
             audioManager.PlaySFX(audioManager.wrongPress);
             stopTimer = true;
             StartCoroutine(ShowFeedbackAndReset());

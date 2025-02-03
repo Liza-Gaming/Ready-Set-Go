@@ -5,6 +5,7 @@ using System.Collections;
 public class SliderController : SliderBar
 {
     [SerializeField] public Text textToShow;
+    [SerializeField] private int failureCount = 1;
 
     protected override void Start()
     {
@@ -19,6 +20,7 @@ public class SliderController : SliderBar
         {
             stopTimer = true;
             textToShow.text = "Too late, Resetting time";
+            IncreaseFailureCount(failureCount);
             StartCoroutine(ShowFeedbackAndReset());
         }
     }

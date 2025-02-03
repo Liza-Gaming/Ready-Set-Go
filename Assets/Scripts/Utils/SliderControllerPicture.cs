@@ -7,6 +7,7 @@ public class SliderControllerPicture : SliderBar
     [SerializeField] public Text textToShow;
     public DisplayImage displayImage; // Reference to the DisplayImage component
     public SelectItems selectItems; // Reference to the SelectItems component
+    [SerializeField] private int failureCount = 1;
 
     protected override void Start()
     {
@@ -21,13 +22,14 @@ public class SliderControllerPicture : SliderBar
         {
             stopTimer = true;
             textToShow.text = "Too late, Resetting time";
+            IncreaseFailureCount(failureCount);
             StartCoroutine(ShowFeedbackAndReset());
         }
     }
 
     private IEnumerator ShowFeedbackAndReset()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         textToShow.text = "";
         ResetTimer();
         selectItems.ResetObjects(); // Reset unactivated objects

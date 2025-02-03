@@ -7394,7 +7394,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   imageObject: {fileID: 795937478}
   backgroundObject: {fileID: 1613384124}
-  displayDuration: 3
+  displayDuration: 2
 --- !u!114 &1865009891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7414,6 +7414,7 @@ MonoBehaviour:
   textToShow: {fileID: 1791426272}
   displayImage: {fileID: 1865009890}
   selectItems: {fileID: 1865009888}
+  failureCount: 1
 --- !u!1 &1907071403
 GameObject:
   m_ObjectHideFlags: 0

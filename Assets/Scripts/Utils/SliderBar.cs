@@ -15,52 +15,59 @@ public class SliderBar : MonoBehaviour
     public bool isTimerRunning;
 
     [SerializeField]
-    [Tooltip("The maximum time the slider will represent (initial timer value")]
+    [Tooltip("The maximum time the slider will represent (initial timer value)")]
     public float maxTime;
 
-    // The Start method is called before the first frame update
+    // Variable to track the number of consecutive failures
+    private int failureCount = 0;
+
+    // Variable to adjust the speed of the timer based on failures
+    private float timerSpeedAdjustment = 1.0f;
+
     protected virtual void Start()
     {
         ResetTimer(); // Initialize and reset timer
         StartCountdown(); // Begin countdown immediately
     }
 
-    // Update is called once per frame
     protected virtual void Update()
     {
-        // If the timer is not supposed to be running, exit Update early
         if (!isTimerRunning)
             return;
 
-        // Calculate the remaining time
-        float time = timerslider.value - Time.deltaTime;
+        float time = timerslider.value - (Time.deltaTime * timerSpeedAdjustment);
 
-        // If the time has elapsed, stop the timer and reset it
         if (time <= 0)
         {
             stopTimer = true;
             isTimerRunning = false;
-            ResetTimer(); // Reset timer to initial state
+            ResetTimer();
         }
 
-        // If the timer should not be stopped, update the slider value
         if (!stopTimer)
         {
-            timerslider.value = time; // Set new slider value based on time
+            timerslider.value = time;
         }
     }
 
-    // Method to start the countdown by marking the timer as running
+    public void IncreaseFailureCount(int n)
+    {
+        failureCount++;
+        if (failureCount >= n)
+        {
+            timerSpeedAdjustment = 0.5f; 
+        }
+    }
+
     protected void StartCountdown()
     {
         isTimerRunning = true;
     }
 
-    // Method to reset the timer to its starting state
     protected virtual void ResetTimer()
     {
         stopTimer = false;
         timerslider.value = maxTime;
-        StartCountdown(); // Restart the countdown
+        StartCountdown();
     }
 }
