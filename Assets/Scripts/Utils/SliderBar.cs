@@ -55,7 +55,7 @@ public class SliderBar : MonoBehaviour
         failureCount++;
         if (failureCount >= n)
         {
-            timerSpeedAdjustment = 0.5f; 
+            timerSpeedAdjustment = 0.5f;
         }
     }
 
