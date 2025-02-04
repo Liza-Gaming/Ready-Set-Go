@@ -1,5 +1,5 @@
 # היכון, הכן, צא! ⏰
-**משחק התארגנות שלוקח אתכם מהיום יום אל חוויה - תכננו, אספו ונצחו**
+**משחק התארגנות שלוקח אתכם מהיום יום אל חוויה - תכננו, אספו ונצחו 🎒**
 
 מחפשים חוויה שמאחדת תשוקה למשחקים עם מטרה חשובה? הצטרפו להרפתקה שתשפר את כישורי ההתארגנות שלכם ותעניק לכם עצמאות אמיתית - ברוכים הבאים ל'היכון, הכן צא!'.
 
@@ -12,17 +12,23 @@
 ## מהות המשחק
 המשחק הוא חוויה תלת-ממדית המיועדת למבוגרים עם לקות שכלית בינונית עד גבולית וקשיים בארגון ותכנון יומי. 
 השחקנים מתמודדים עם אתגרים של התארגנות על מנת להגיע לאירועים שונים, תוך שימוש ברמזים או רשימות. בכל חדר בדירה, הם צריכים לאסוף פריטים חיוניים כמו בגדים, אוכל ונעליים, תוך כדי פתרון משחקים קטנים ודילמות חווייתיות.
-בסוף המשחק, השחקנים מקבלים דירוג על כישורי ההתארגנות שלהם בהתאם לניקוד שהשיגו.
+בסוף המשחק, זמן האתרגנות של השחקנים נשמר בענן ומוצג בלוח התוצאות כך שיתאפשר מעקב אחר הביצועים.
 המטרה של המשחק היא לעזור לקהל היעד לאמץ כישורי התארגנות ובכך להגדיל את עצמאותם.
 
 [formal elemnts](https://github.com/Liza-Gaming/Ready-Set-Go/blob/main/formal-elements.md)
 
 [dramatic elements](https://github.com/Liza-Gaming/Ready-Set-Go/blob/main/dramatic-elements.md)
-## תכונות עקריות
-- חוויה תלת-ממדית מרתקת: סביבה וירטואלית שמחקה את המציאות אותה שחקננים יכולים לחקור.
-- אתגרים יומיומיים: איסוף פריטים חיוניים בכל חדר, כגון בגדים, אוכל ונעליים.
-- משחקים קטנים ודילמות: פתרון בעיות ולקיחת החלטות לשיפור הקוגנטיביות.
-- מערכת דירוג: קבלת משוב מיידי על ביצועים וכישורי התארגנות.
+## פיצ'רים 🚀
+- **חוויה תלת-ממדית מרתקת:** סביבה וירטואלית שמחקה את המציאות אותה שחקננים יכולים לחקור.
+- **התאמת המשחק לרמת השחקן:** לא רק שהשחקן יכול לבחור את זמן ההתארגנות, אלא שאם הוא מתקשה במהלך משימה, המשימה תהיה קלה יותר (לדוגמא - הזמן יירד לאט יותר)
+- **אתגרים יומיומיים:** איסוף פריטים חיוניים בכל חדר, כגון בגדים, אוכל ונעליים.
+- **משחקים קטנים ודילמות:** פתרון בעיות ולקיחת החלטות לשיפור הקוגנטיביות.
+- **מערכת דירוג:** קבלת משוב מיידי על ביצועים וכישורי התארגנות בסוף המשחק, מאפשר מעקב אחר הביצועים של השחקן.
+- **רשימה מתעדכנת:** השחקן יכול לראות מה הוא השלים ומה נשאר לו.
+- **מערכת רמזים.**
+- **צלילים:** מספקים משוב.
+
+## תרשים זרימה
 
 ![Screenshot 2024-11-27 113004](https://github.com/user-attachments/assets/b2121c8a-ffba-4e60-b5f2-7617a50a7d6d)
 
@@ -46,17 +52,12 @@ Assets/
 |   └── HistoryScene
 |
 ├── Scripts/
-│   ├── RetryGame/
-|   |   ├── WinSceneController.cs
-|   |   └── RetryGame.cs
 │   │
 │   ├── Intro Scene/
 │   │   ├── ButtonScript.cs
 │   │   └── IntroVideoPlayer.cs
 │   │
 │   ├── Kitchen Scene/
-│   │   ├── Fridge/
-│   │   │   └── DisplayImage.cs
 │   │   └── Stove/
 │   │       └── StoveSliderBar.cs
 │   │
@@ -79,36 +80,36 @@ Assets/
 │   │
 │   ├── Player/
 │   │   ├── MoveLogic/
+│   │   |   ├── ButtonHandler.cs
 │   │   │   ├── CameraBob.cs
 |   |   |   ├── KeyBoardController.cs
 │   │   │   └── Movement.cs
-│   │   ├── ButtonHandler.cs
 │   │   ├── PlayerManager.cs
+│   │   ├── UIManager.cs
 │   │   ├── HoverMove.cs
 │   │   └── MissionTrigger.cs
 │   │
-|   ├── RetryGame/
-|   |   ├── DisplayImageUI.cs
-|   |   ├── GameOverController.cs
+│   ├── RetryGame/
+|   |   ├── CloudSave.cs
+|   |   ├── ScoreboardController.cs
 |   |   ├── NavigateToHistory.cs
-|   |   ├── RetryGame.cs
-|   |   └── WinSceneController.cs
+|   |   ├── WinSceneController.cs
+|   |   └── RetryGame.cs
 |   | 
 │   ├── Utils/
-|   |   ├── GameDataManager.cs
+|   |   ├── AudioManager.cs
+│   │   ├── DisplayImage.cs
+│   │   ├── DoorInteraction.cs
 │   │   ├── SceneController.cs
 │   │   ├── SceneLoader.cs
-│   │   ├── SliderBar.cs
-|   |   ├── TaskInstructions.cs
-│   │   ├── Timer.cs
-│   │   ├── UIManager.cs
 │   │   ├── Selection.cs
 │   │   ├── SelectItems.cs
 │   │   ├── SliderController.cs
-│   │   ├── MissionTrigger.cs
-│   │   ├── DisplayImage.cs
-|   |   ├── DoorInteraction.cs
-│   │   └── AudioManager.cs
+│   │   ├── SliderBar.cs
+|   |   ├── SliderControllerDesk.cs
+|   |   ├── SliderControllerPicture.cs
+|   |   ├── TaskInstructions.cs
+│   │   └── Timer.cs
 │   │
 └── └── UI/
 ```
@@ -122,7 +123,7 @@ Assets/
 
 **נכסים**
 
-[נכסי רהיטים](https://kenney.nl/assets/furniture-kit), [נכסי אוכל](https://kenney.nl/assets/food-kit), [נכסים נוספים](https://assetstore.unity.com/packages/3d/props/simple-free-beach-models-287370)
+[נכסי רהיטים](https://kenney.nl/assets/furniture-kit), [נכסי אוכל](https://kenney.nl/assets/food-kit), [בגדים](https://assetstore.unity.com/packages/3d/characters/humanoids/creative-characters-free-animated-low-poly-3d-models-304841), [נכסים נוספים](https://assetstore.unity.com/packages/3d/props/simple-free-beach-models-287370)
 
 **טקסטורות**
 
@@ -143,6 +144,9 @@ Assets/
 **טריילר משחק**
 [animaker](https://www.animaker.com/)
 
+**תודות נוספות**
+
+אני מודה למרצה אראל דוד סגל-הלוי על המידע שהועבר במסגרת קורס פיתוח משחקי מחשב באריאל ולמתרגל ויקטור קושניר שעזר לי לפתור תקלות במשחק.
 
 ## פיתוח
 
