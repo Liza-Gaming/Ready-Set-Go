@@ -6,6 +6,8 @@ using Unity.Services.Authentication;
 using Unity.Services.CloudSave;
 using System;
 
+// Got help from: https://www.youtube.com/results?search_query=how+to+use+scrollview+in+unity
+
 public class CloudSave : MonoBehaviour
 {
     private const string CLOUD_SAVE_CHOSEN_TIME_KEY = "chosenTime";
@@ -135,25 +137,25 @@ public class CloudSave : MonoBehaviour
     }
 
     [System.Serializable]
-public class PlayerSession
-{
-    public string playerId;
-    public int chosenTime;
-    public string finishedTime;
-
-    public PlayerSession(string playerId, int chosenTime, string finishedTime)
+    public class PlayerSession
     {
-        this.playerId = playerId;
-        this.chosenTime = chosenTime;
-        this.finishedTime = finishedTime;
-    }
-}
+        public string playerId;
+        public int chosenTime;
+        public string finishedTime;
 
-[System.Serializable]
-public class SaveDataWrapper
-{
-    public List<PlayerSession> sessions = new List<PlayerSession>();
-}
+        public PlayerSession(string playerId, int chosenTime, string finishedTime)
+        {
+            this.playerId = playerId;
+            this.chosenTime = chosenTime;
+            this.finishedTime = finishedTime;
+        }
+    }
+
+    [System.Serializable]
+    public class SaveDataWrapper
+    {
+        public List<PlayerSession> sessions = new List<PlayerSession>();
+    }
 }
 
 

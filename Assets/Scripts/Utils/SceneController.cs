@@ -67,7 +67,6 @@ public class SceneController : MonoBehaviour
         }
     }
 
-    
     public Image GetFirstUnloadedSceneHint()
     {
         foreach (string sceneName in relevantScenes)
