@@ -22,6 +22,6 @@ public class RetryGame : MonoBehaviour
         {
             UIManager.instance.Reset();
         }
-        SceneManager.LoadScene("Intro"); // The main scene to start again
+        SceneManager.LoadScene("ChooseTime"); // The main scene to start again
     }
 }

@@ -1,30 +1,27 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
+using System.Runtime.ConstrainedExecution;
 
 public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
     public ButtonHandler buttonHandler;
     private HashSet<string> loadedScenes = new HashSet<string>();
+    [SerializeField] private List<Image> HintImages = new List<Image>(); // Assign these in Inspector
     [SerializeField] private int numOfTasks = 5;
     [SerializeField] private GameObject finalScene;
     [SerializeField] private GameObject sunscreenObject;
     [SerializeField] private GameObject purseObject;
+    [SerializeField] private Image FinalHint;
     private string nextSceneName;
 
     [SerializeField]
     private List<string> relevantScenes = new List<string>();
 
-    // Store mission descriptions
-    private Dictionary<string, string> missionDescriptions = new Dictionary<string, string>
-    {
-        { "Stove", "Are you hungry for brakfast?" },
-        { "Fridge", "Everyone loves cold, refreshing fruits." },
-        { "Wardrobe", "Where do you find clothes?" },
-        { "Desk", "Don't forget the things on the table!" },
-        { "Towel", "Towel is needed not only after a bath." }
-    };
+    // Dictionary to store mission hint images
+    private Dictionary<string, Image> missionHints;
 
     private void Awake()
     {
@@ -33,12 +30,22 @@ public class SceneController : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
             SceneManager.sceneLoaded += OnSceneLoaded;
+
+            // Ensure HintImages has enough elements before accessing indexes
+            missionHints = new Dictionary<string, Image>();
+
+            if (HintImages.Count > 0) missionHints["Stove"] = HintImages[0];
+            if (HintImages.Count > 1) missionHints["Fridge"] = HintImages[1];
+            if (HintImages.Count > 2) missionHints["Wardrobe"] = HintImages[2];
+            if (HintImages.Count > 3) missionHints["Desk"] = HintImages[3];
+            if (HintImages.Count > 4) missionHints["Towel"] = HintImages[4];
         }
         else if (instance != this)
         {
             Destroy(gameObject);
         }
     }
+
 
     public bool IsSceneLoaded(string sceneName)
     {
@@ -53,26 +60,27 @@ public class SceneController : MonoBehaviour
     public void MarkSceneAsLoaded(string sceneName)
     {
         loadedScenes.Add(sceneName);
-        if (sceneName == "Desk") // Check if the Desk scene has been completed
+        if (sceneName == "Desk")
         {
-            sunscreenObject.SetActive(false); // Hide SunScreen
-            purseObject.SetActive(false);     // Hide Purse
+            sunscreenObject.SetActive(false);
+            purseObject.SetActive(false);
         }
     }
 
-    public string GetFirstUnloadedSceneDescription()
+    
+    public Image GetFirstUnloadedSceneHint()
     {
         foreach (string sceneName in relevantScenes)
         {
             if (!loadedScenes.Contains(sceneName))
             {
-                if (missionDescriptions.TryGetValue(sceneName, out string description))
+                if (missionHints.TryGetValue(sceneName, out Image hintImage))
                 {
-                    return description;
+                    return hintImage;
                 }
             }
         }
-        return "Go to the exit door.";
+        return FinalHint;
     }
 
     private void OnDestroy()
@@ -82,7 +90,7 @@ public class SceneController : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        UIManager.instance.ShowTasks(scene.buildIndex == 1); // Show tasks only in main scene
+        UIManager.instance.ShowTasks(scene.buildIndex == 1);
         UIManager.instance.ToggleArrows(scene.buildIndex == 1);
         if (scene.buildIndex == 1)
         {
@@ -96,9 +104,13 @@ public class SceneController : MonoBehaviour
 
     public void OnHintButtonClicked()
     {
-        string missionText = SceneController.instance.GetFirstUnloadedSceneDescription();
-        UIManager.instance.ShowHint(missionText);
+        Image hintImage = SceneController.instance.GetFirstUnloadedSceneHint();
+        if (hintImage != null)
+        {
+            UIManager.instance.ShowHintImage(hintImage);
+        }
     }
+
 
     public void Reset()
     {

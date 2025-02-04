@@ -772,9 +772,10 @@ MonoBehaviour:
   - {fileID: 9208957619934203311, guid: 8c2291542d5f21640b3810671c12ec45, type: 3}
   - {fileID: 5096265575550028793, guid: fca9fd3007fc17d46b2f2515be265ea8, type: 3}
   - {fileID: 6981066477911224715, guid: 2c2037742472b0644b551c801dc4499e, type: 3}
-  minTimeBetweenSpawns: 0.5
-  maxTimeBetweenSpawns: 1.5
-  maxXDistance: 5
+  - {fileID: 2579727602580515403, guid: c3c91d6754f7ad0479a42dc050c27ade, type: 3}
+  minTimeBetweenSpawns: 1
+  maxTimeBetweenSpawns: 1
+  maxXDistance: 7
   parentOfAllInstances: {fileID: 684136108}
 --- !u!4 &620283330
 Transform:
@@ -785,7 +786,7 @@ Transform:
   m_GameObject: {fileID: 620283328}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.29, y: 5.6618013, z: -5.93}
+  m_LocalPosition: {x: -1.47, y: 5.6618013, z: -5.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -817,7 +818,7 @@ Transform:
   m_GameObject: {fileID: 684136107}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7989879, y: 7.108199, z: 3.87}
+  m_LocalPosition: {x: 1.34, y: 7.108199, z: 3.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

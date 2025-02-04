@@ -22,14 +22,12 @@ public class MissionTrigger : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Clear the mission text when the GameObject with this script is destroyed
         if (UIManager.instance != null && UIManager.instance.mission != null)
         {
             UIManager.instance.mission.gameObject.SetActive(false);
         }
     }
 
-    // Method to update the mission text based on entering or exiting the trigger
     private void UpdateMissionText(Collider other, bool isEntering)
     {
         if (other.tag == "Bonus")
@@ -39,20 +37,22 @@ public class MissionTrigger : MonoBehaviour
             Destroy(other.gameObject);
             StartCoroutine(ShowFeedback());
         }
-        if (UIManager.instance != null && UIManager.instance.taskTexts.Count > 0)
+
+        if (UIManager.instance != null && UIManager.instance.taskImages.Count > 0)
         {
-            foreach (var taskText in UIManager.instance.taskTexts)
+            foreach (var taskImage in UIManager.instance.taskImages)
             {
-                if (taskText.tag == other.tag)
+                if (taskImage.tag == other.tag)
                 {
                     if (isEntering)
                     {
-                        UIManager.instance.mission.text = taskText.text;
-                        UIManager.instance.mission.gameObject.SetActive(true); // Ensure the mission text is visible
+                        // **Show the corresponding task image**
+                        UIManager.instance.mission.sprite = taskImage.sprite; // Assign the correct image
+                        UIManager.instance.mission.gameObject.SetActive(true); // Show the image
                     }
                     else
                     {
-                        UIManager.instance.mission.gameObject.SetActive(false); // Hide the mission text
+                        UIManager.instance.mission.gameObject.SetActive(false); // Hide when leaving
                     }
                     return;
                 }

@@ -6501,6 +6501,7 @@ MonoBehaviour:
   textToShow: {fileID: 497946932}
   loweLimit: 0.85
   upperLimit: 1.6
+  failureCount: 3
 --- !u!4 &1443969148
 Transform:
   m_ObjectHideFlags: 0

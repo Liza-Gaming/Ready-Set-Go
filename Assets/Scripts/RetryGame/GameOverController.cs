@@ -1,24 +1,33 @@
 using UnityEngine;
+using Unity.Services.CloudSave;
+using System.Collections.Generic;
+using Unity.Services.Authentication;  // for playerId
 
 public class GameOverController : MonoBehaviour
 {
-    void Start()
+    async void Start()
     {
-        // Get the chosen time from PlayerPrefs or TimerSettings
-        int chosenTime = PlayerPrefs.GetInt("ChosenTime", Mathf.FloorToInt(TimerSettings.ChosenTimeInSeconds / 60));
-
-        // Since the player ran out of time, we set the finished time to "00:00"
-        string completionTime = "00:00";
-
-        // Save the session indicating the player ran out of time
-        GameDataManager gameData = FindObjectOfType<GameDataManager>();
-        if (gameData != null)
+        // (Optionally) fetch chosen time 
+        var keysToLoad = new HashSet<string> { "ChosenTime" };
+        var loadedData = await CloudSaveService.Instance.Data.LoadAsync(keysToLoad);
+        int chosenTime = 0;
+        if (loadedData.TryGetValue("ChosenTime", out var loadedChosenTimeValue)
+            && int.TryParse(loadedChosenTimeValue.ToString(), out chosenTime))
         {
-            gameData.SaveSession(chosenTime, completionTime);
+            Debug.Log("Successfully retrieved chosen time: " + chosenTime);
         }
         else
         {
-            Debug.LogWarning("GameDataManager not found in scene!");
+            Debug.LogError("Failed to retrieve or parse chosen time");
         }
+
+        // --------------------------------
+        // Instead of ForceSaveAsync(...), append a new session:
+        // --------------------------------
+        CloudSave.Instance.SaveSession(
+            AuthenticationService.Instance.PlayerId,
+            chosenTime,
+            "00:00" // or whatever you want to record for a "GameOver" scenario
+        );
     }
 }
