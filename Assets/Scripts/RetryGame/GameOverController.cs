@@ -10,7 +10,6 @@ public class GameOverController : MonoBehaviour
 {
     async void Start()
     {
-        
         var keysToLoad = new HashSet<string> { "ChosenTime" };
         var loadedData = await CloudSaveService.Instance.Data.LoadAsync(keysToLoad);
         int chosenTime = 0;
