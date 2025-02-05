@@ -3,11 +3,14 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
+/**
+ * Shows the instructions in slide show way
+ */
 public class slideshow : MonoBehaviour
 {
-    public Image instructionImage; // Drag your UI Image component here
-    public Sprite[] instructionSprites; // Assign your images in the inspector
-    public string nextSceneName; // Name of the next scene to load
+    public Image instructionImage;
+    public Sprite[] instructionSprites;
+    public string nextSceneName;
     private int currentIndex = 0;
 
     void Start()

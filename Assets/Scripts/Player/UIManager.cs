@@ -5,17 +5,20 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+/**
+ * Responsible for all the buttons and texts in the main scene.
+ */
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
 
-    [SerializeField] private List<GameObject> arrowUI;
-    public GameObject hint;
-    public GameObject paper;
-    public Image mission;
-    [SerializeField] private List<Image> HintImages = new List<Image>();
-    [SerializeField] public List<Image> taskImages = new List<Image>();
-    [SerializeField] public List<GameObject> taskCheckmarks = new List<GameObject>(); // List of checkmark images
+    [SerializeField] private List<GameObject> arrowUI; // moving arrows
+    public GameObject hint;// hint button
+    public GameObject paper;// list
+    public Image mission;// mission name when the player is near the mission
+    [SerializeField] private List<Image> HintImages = new List<Image>();// hints
+    [SerializeField] public List<Image> taskImages = new List<Image>();// mission name
+    [SerializeField] public List<GameObject> taskCheckmarks = new List<GameObject>(); // List of checkmark images V
     [SerializeField] public Image bonusText;
 
     private Coroutine hintCoroutine;

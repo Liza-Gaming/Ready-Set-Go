@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/**
+ * Moves the list up or down when the mouse is on it
+ */
 public class HoverMove : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Vector3 hoverPositionOffset = new Vector3(0, 100, 0);

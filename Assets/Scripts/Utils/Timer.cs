@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/**
+ * The times=r in the main scene
+ */
 public class Timer : MonoBehaviour
 {
     [SerializeField] private Text timerText;
@@ -18,7 +21,7 @@ public class Timer : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
-            SceneManager.sceneLoaded += OnSceneLoaded; // Subscribe to the sceneLoaded event
+            SceneManager.sceneLoaded += OnSceneLoaded;
             if (TimerSettings.TimeHasBeenSet)
             {
                 SetInitialTime(TimerSettings.ChosenTimeInSeconds);

@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
 
+/**
+ * Moving with keyboard
+ */
 public class KeyBoardControll : MonoBehaviour
 {
     [SerializeField] float speed = 6.0f;

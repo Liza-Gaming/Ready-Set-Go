@@ -1,13 +1,16 @@
 using UnityEngine;
 using Unity.Services.CloudSave;
 using System.Collections.Generic;
-using Unity.Services.Authentication;  // for playerId
+using Unity.Services.Authentication;
 
+/**
+ * Saves the score
+ */
 public class GameOverController : MonoBehaviour
 {
     async void Start()
     {
-        // (Optionally) fetch chosen time 
+        
         var keysToLoad = new HashSet<string> { "ChosenTime" };
         var loadedData = await CloudSaveService.Instance.Data.LoadAsync(keysToLoad);
         int chosenTime = 0;
@@ -21,13 +24,10 @@ public class GameOverController : MonoBehaviour
             Debug.LogError("Failed to retrieve or parse chosen time");
         }
 
-        // --------------------------------
-        // Instead of ForceSaveAsync(...), append a new session:
-        // --------------------------------
         CloudSave.Instance.SaveSession(
             AuthenticationService.Instance.PlayerId,
             chosenTime,
-            "00:00" // or whatever you want to record for a "GameOver" scenario
+            "00:00"
         );
     }
 }

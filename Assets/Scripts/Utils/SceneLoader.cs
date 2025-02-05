@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+/**
+ * Loads the scens (missions)
+ */
 public class SceneLoader : MonoBehaviour
 {
     public GameObject player; // Reference to the player GameObject

@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/**
+ * Displays an image when the mouse is above an object
+ */
+
 public class HoverDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public GameObject imageToDisplay;

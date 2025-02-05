@@ -3,13 +3,15 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System.Runtime.ConstrainedExecution;
-
+/**
+ * Tracks the progress of the scenes and also keeps the house from being destroyed.
+ */
 public class SceneController : MonoBehaviour
 {
     public static SceneController instance;
     public ButtonHandler buttonHandler;
     private HashSet<string> loadedScenes = new HashSet<string>();
-    [SerializeField] private List<Image> HintImages = new List<Image>(); // Assign these in Inspector
+    [SerializeField] private List<Image> HintImages = new List<Image>();
     [SerializeField] private int numOfTasks = 5;
     [SerializeField] private GameObject finalScene;
     [SerializeField] private GameObject sunscreenObject;

@@ -3,7 +3,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
 
-
+/**
+ * Used in collection missions
+ */
 public class SelectItems : MonoBehaviour
 {
     public GameObject[] interactableObjects;

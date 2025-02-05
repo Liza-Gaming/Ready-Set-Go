@@ -3,7 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using Unity.Services.CloudSave;
 using System.Threading.Tasks;
-
+/**
+ * Shows the scores in the HistoryScene
+ */
 public class ScoreboardController : MonoBehaviour
 {
     public GameObject textPrefab;

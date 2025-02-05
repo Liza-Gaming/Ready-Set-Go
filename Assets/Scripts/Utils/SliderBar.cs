@@ -50,6 +50,7 @@ public class SliderBar : MonoBehaviour
         }
     }
 
+    //Adjusts the time to the player
     public void IncreaseFailureCount(int n)
     {
         failureCount++;

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-
+//Got help from: https://www.youtube.com/watch?v=N8whM1GjH4w&t=444s&ab_channel=RehopeGames
 public class AudioManager : MonoBehaviour
 {
     [SerializeField] AudioSource sounds;

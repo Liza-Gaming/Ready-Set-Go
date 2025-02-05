@@ -2,9 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+/**
+ * Shows the button after the video
+ */
 public class ButtonScript : MonoBehaviour
 {
-    public Button loadSceneButton;  // Assign through inspector
+    public Button loadSceneButton;
     public Button skip;
     [SerializeField] private float delayTime = 32f;
 

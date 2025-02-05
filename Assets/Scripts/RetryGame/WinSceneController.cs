@@ -2,15 +2,17 @@
 using UnityEngine.UI;
 using Unity.Services.CloudSave;
 using System.Collections.Generic;
-using Unity.Services.Authentication;  // For playerId
+using Unity.Services.Authentication;
 
+/**
+ * Saves the score
+ */
 public class WinSceneController : MonoBehaviour
 {
     [SerializeField] private Text winText;
 
     async void Start()
     {
-        // Fetch chosen time (Optional if you still need it separately.)
         var keysToLoad = new HashSet<string> { "ChosenTime" };
         var loadedData = await CloudSaveService.Instance.Data.LoadAsync(keysToLoad);
         int chosenTime = 0;
@@ -33,13 +35,8 @@ public class WinSceneController : MonoBehaviour
         // Display result
         winText.text = completionTime;
 
-        // -------------------------------
-        // Instead of ForceSaveAsync(...) to "ChosenTime" and "FinishedTime",
-        // call CloudSave.Instance.SaveSession(...) so that you keep
-        // appending sessions in the "PlayerSessions" list
-        // -------------------------------
         CloudSave.Instance.SaveSession(
-            AuthenticationService.Instance.PlayerId,  // or some unique player ID
+            AuthenticationService.Instance.PlayerId,
             chosenTime,
             completionTime
         );

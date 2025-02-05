@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/**
+ * Responsible for the walking effect
+ */
 public class CameraBob : MonoBehaviour
 {
     [SerializeField] public float bobbingSpeed = 0.18f;  // Speed of the bob

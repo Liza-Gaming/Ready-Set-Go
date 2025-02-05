@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+/**
+ * Moving logic with the mouse
+ */
+
 public class ButtonHandler : MonoBehaviour
 {
     public Movement movement;

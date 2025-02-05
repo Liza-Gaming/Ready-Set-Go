@@ -1,6 +1,9 @@
 using UnityEngine;
 using System.Collections;
-
+/**
+ * Shows the mission name when theplayer is close to the mission.
+ * Collects the bonus items
+ */
 public class MissionTrigger : MonoBehaviour
 {
     AudioManager audioManager;

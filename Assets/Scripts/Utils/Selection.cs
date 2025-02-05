@@ -4,8 +4,9 @@ using TMPro.Examples;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-
-
+/**
+ * Used in collection missions
+ */
 public class Selection : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Material hoverMaterial;

@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/**
+ * Saves the player state across scenes.
+ */
 public class PlayerManager : MonoBehaviour
 {
     public static PlayerManager instance;

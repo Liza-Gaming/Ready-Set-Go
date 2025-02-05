@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/**
+ * For moving with the arrow buttons
+ */
 public class Movement : MonoBehaviour
 {
     [SerializeField] private float speed = 6.0f;
