@@ -1,6 +1,7 @@
 using UnityEngine;
 
 /**
+ * Code from the course
  * This component moves its object in a fixed velocity.
  */
 public class Mover : MonoBehaviour

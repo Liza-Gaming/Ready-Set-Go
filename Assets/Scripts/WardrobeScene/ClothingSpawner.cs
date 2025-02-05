@@ -2,6 +2,9 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
+/**
+ * Code from the course
+ */
 public class ClothingSpawner : MonoBehaviour
 {
     [SerializeField] public List<GameObject> prefabToSpawn = new List<GameObject>();
